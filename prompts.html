@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog AI Prompt | SelBa Tech</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        dark: '#0f172a',
+                        accent: '#38bdf8'
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-mesh {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(186, 230, 253, 0.6) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(199, 210, 254, 0.5) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(224, 242, 254, 0.7) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-mesh text-slate-900 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-xl z-50 border-b border-slate-200/80">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
+                <span class="w-8 h-8 bg-primary rounded-xl flex items-center justify-center text-white text-base">⚡</span>
+                SelBa<span class="text-primary">.Tech</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-primary transition">← Kembali ke Beranda</a>
+                <a href="#katalog" class="hover:text-primary transition">Daftar Prompt</a>
+                <a href="#kustom" class="hover:text-primary transition">Request Prompt</a>
+            </div>
+            <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20ingin%20tanya%20mengenai%20AI%20Prompt" target="_blank" class="bg-dark hover:bg-slate-800 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition shadow-md">
+                Konsultasi Prompt
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-36 pb-12 px-6 max-w-6xl mx-auto text-center">
+        <div class="bg-white/80 backdrop-blur-md border border-slate-200/90 rounded-4xl p-8 md:p-12 shadow-xl shadow-slate-200/60">
+            <span class="px-4 py-1.5 bg-blue-50 border border-blue-200 rounded-full text-primary text-xs font-bold uppercase tracking-wider">
+                🤖 SelBa Prompt Hub
+            </span>
+            <h1 class="text-3xl md:text-5xl font-black text-slate-900 mt-4 leading-tight">
+                Kumpulan AI Prompt Siap Pakai untuk <span class="text-primary">Bisnis & Produktivitas</span>
+            </h1>
+            <p class="text-slate-600 text-base md:text-lg mt-3 max-w-2xl mx-auto">
+                Tingkatkan kualitas output ChatGPT, Gemini, dan Claude milikmu secara instant dengan struktur prompt profesional pilihan SelBa Tech.
+            </p>
+        </div>
+    </section>
+
+    <!-- PROMPT CATALOG GRID -->
+    <section id="katalog" class="py-8 max-w-6xl mx-auto px-6 w-full">
+        <!-- Filter Tabs / Categories -->
+        <div class="flex flex-wrap gap-2 justify-center mb-10">
+            <span class="px-5 py-2 bg-primary text-white rounded-full text-xs font-bold cursor-pointer shadow-md shadow-blue-500/20">Semua Prompt</span>
+            <span class="px-5 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold cursor-pointer border border-slate-200">Google Apps Script & Coding</span>
+            <span class="px-5 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold cursor-pointer border border-slate-200">Bisnis & Sales</span>
+            <span class="px-5 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold cursor-pointer border border-slate-200">Content Creation</span>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <!-- Prompt Item 1 -->
+            <div class="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-md hover:shadow-xl transition flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">Coding & GAS</span>
+                        <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded-full">GRATIS</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Apps Script Error Debugger & Fixer</h3>
+                    <p class="text-slate-600 text-xs mb-4 leading-relaxed">
+                        Prompt kustom untuk menganalisis kode Google Apps Script yang error dan memberikan solusi perbaikan beserta penjelasannya.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-slate-500 text-[11px] font-mono mb-6 italic line-clamp-3">
+                        "Bertindaklah sebagai Google Apps Script Senior Engineer. Analisis kode GAS berikut dan temukan bug/error..."
+                    </div>
+                </div>
+                <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20mau%20minta%20Prompt%20GAS%20Debugger" target="_blank" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-900 text-center font-bold py-2.5 rounded-xl transition text-xs block">
+                    Dapatkan Prompt
+                </a>
+            </div>
+
+            <!-- Prompt Item 2 -->
+            <div class="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-md hover:shadow-xl transition flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-purple-50 text-purple-700 text-[10px] font-bold rounded-full">Bisnis & Sales</span>
+                        <span class="text-sm font-extrabold text-slate-900">Rp 25.000</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">SOP Generator & Workflow Maker</h3>
+                    <p class="text-slate-600 text-xs mb-4 leading-relaxed">
+                        Prompt untuk mengubah alur kerja acak tim menjadi Standar Operasional Prosedur (SOP) yang rapi dan siap pakai.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-slate-500 text-[11px] font-mono mb-6 italic line-clamp-3">
+                        "Buatkan SOP langkah demi langkah untuk proses operasional [Sebutkan Bisnis] dengan format tabel ringkas..."
+                    </div>
+                </div>
+                <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20mau%20beli%20Prompt%20SOP%20Generator" target="_blank" class="w-full bg-primary hover:bg-blue-700 text-white text-center font-bold py-2.5 rounded-xl transition text-xs block shadow-md shadow-blue-500/10">
+                    Beli Prompt (Rp 25k)
+                </a>
+            </div>
+
+            <!-- Prompt Item 3 -->
+            <div class="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-md hover:shadow-xl transition flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full">Content Creation</span>
+                        <span class="text-sm font-extrabold text-slate-900">Rp 35.000</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">High-Converting Copywriting Bundle</h3>
+                    <p class="text-slate-600 text-xs mb-4 leading-relaxed">
+                        Kumpulan 5 prompt untuk membuat teks promosi WhatsApp, landing page, dan caption media sosial dengan formula AIDA & PAS.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-slate-500 text-[11px] font-mono mb-6 italic line-clamp-3">
+                        "Tuliskan naskah promosi WhatsApp yang persuasif menggunakan kerangka AIDA untuk produk..."
+                    </div>
+                </div>
+                <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20mau%20beli%20Bundle%20Prompt%20Copywriting" target="_blank" class="w-full bg-primary hover:bg-blue-700 text-white text-center font-bold py-2.5 rounded-xl transition text-xs block shadow-md shadow-blue-500/10">
+                    Beli Bundle (Rp 35k)
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION CUSTOM REQUEST -->
+    <section id="kustom" class="py-12 max-w-6xl mx-auto px-6 w-full">
+        <div class="bg-primary rounded-4xl p-8 md:p-12 text-white text-center shadow-xl shadow-blue-500/20">
+            <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Butuh Prompt Kustom Sesuai Kebutuhan Bisnismu?</h2>
+            <p class="text-blue-100 text-sm max-w-xl mx-auto mb-6">
+                Tim SelBa Tech siap merancang *Prompt Engineering System* khusus yang disesuaikan dengan alur kerja operasional tim atau perusahaanmu.
+            </p>
+            <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20butuh%20Prompt%20Engineering%20Kustom" target="_blank" class="bg-white text-primary hover:bg-blue-50 font-extrabold px-8 py-3.5 rounded-full transition text-sm inline-block shadow-lg">
+                Konsultasi Request Prompt 💬
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 py-8 mt-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+            <div>
+                &copy; 2026 SelBa Tech — AI Prompt Catalog.
+            </div>
+            <div>
+                <a href="index.html" class="hover:text-primary transition font-semibold">Kembali ke SelBa.Tech</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
