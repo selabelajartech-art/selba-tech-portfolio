@@ -11,186 +11,185 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563eb',
-                        secondary: '#0f172a',
-                        accent: '#38bdf8'
+                        primary: '#2563eb',    /* Electric Blue */
+                        dark: '#0f172a',       /* Midnight Dark */
+                        accent: '#38bdf8',     /* Cyan Light */
+                        canvas: '#f1f5f9'     /* Soft Slate Base */
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
                     }
                 }
             }
         }
     </script>
     <!-- Font Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        
+        /* Background Mesh Gradient yang mirip dengan gambar referensi */
+        .bg-mesh {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(186, 230, 253, 0.6) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(199, 210, 254, 0.5) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(224, 242, 254, 0.7) 0px, transparent 50%);
+        }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 antialiased">
+<body class="bg-mesh text-slate-900 antialiased min-h-screen">
 
-    <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-800">
+    <!-- NAVBAR (Glassmorphism Light) -->
+    <nav class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-xl z-50 border-b border-slate-200/80">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-extrabold text-white tracking-tight">
+            <a href="#" class="text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
+                <span class="w-8 h-8 bg-primary rounded-xl flex items-center justify-center text-white text-base">⚡</span>
                 SelBa<span class="text-primary">.Tech</span>
             </a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
                 <a href="#layanan" class="hover:text-primary transition">Layanan</a>
                 <a href="#produk" class="hover:text-primary transition">Produk Digital</a>
                 <a href="#kelas" class="hover:text-primary transition">Kelas & Mentoring</a>
                 <a href="#portofolio" class="hover:text-primary transition">Proyek</a>
             </div>
-            <!-- Tombol WA Navbar -->
-            <a href="https://wa.me/6285121178423?text=Halo%20SelBa%20Tech,%20saya%20ingin%20konsultasi%20mengenai%20layanan%20digital" target="_blank" class="bg-primary hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition shadow-lg shadow-blue-500/20">
-                Konsultasi Gratis
+            <!-- CTA Navbar (Dark Pill) -->
+            <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20ingin%20konsultasi%20mengenai%20layanan%20digital" target="_blank" class="bg-dark hover:bg-slate-800 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition shadow-md shadow-slate-900/10">
+                Konsultasi
             </a>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="pt-36 pb-20 px-6 max-w-6xl mx-auto text-center md:text-left md:flex md:items-center md:justify-between">
-        <div class="md:w-3/5 space-y-6">
-            <div class="inline-block px-4 py-1.5 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-xs font-semibold uppercase tracking-wider">
-                Sela Belajar Tech — Solusi Digital & Otomatisasi
-            </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
-                Tingkatkan Efisiensi Bisnis Lebih Cepat Bersama <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-accent">SelBa Tech</span>
-            </h1>
-            <p class="text-slate-400 text-lg md:text-xl font-normal leading-relaxed">
-                Kami membantu UMKM & Profesional mengotomatisasi pekerjaan dengan **Google Apps Script**, membangun **Web Modern**, dan menghadirkan solusi **AI Consultation**.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
-                <a href="#layanan" class="bg-primary hover:bg-blue-700 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg shadow-blue-600/30 transition text-center">
-                    Eksplor Layanan
-                </a>
-                <a href="#kelas" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-6 py-3.5 rounded-xl transition text-center">
-                    Lihat Kelas
-                </a>
-            </div>
-        </div>
-        <div class="mt-12 md:mt-0 md:w-2/5 flex justify-center">
-            <div class="w-72 h-72 md:w-80 md:h-80 bg-gradient-to-tr from-primary to-accent rounded-3xl p-1 shadow-2xl shadow-blue-500/20 rotate-3 hover:rotate-0 transition duration-500">
-                <div class="w-full h-full bg-slate-900 rounded-[22px] flex flex-col justify-center items-center p-6 text-center border border-slate-800">
-                    <span class="text-5xl mb-4">🚀</span>
-                    <h3 class="text-xl font-bold text-white">Smart Automation</h3>
-                    <p class="text-sm text-slate-400 mt-2">Menghubungkan Google Sheets, WhatsApp API, dan AI Workflow dalam sekali klik.</p>
+    <!-- HERO SECTION (Bento Layout) -->
+    <section class="pt-36 pb-16 px-6 max-w-6xl mx-auto">
+        <div class="bg-white/80 backdrop-blur-md border border-slate-200/90 rounded-4xl p-8 md:p-14 shadow-xl shadow-slate-200/60 relative overflow-hidden">
+            <!-- Decorative Light Wave -->
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-3xl space-y-6 relative z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-slate-100 border border-slate-200 rounded-full text-slate-700 text-xs font-bold uppercase tracking-wider">
+                    <span>✨</span> Sela Belajar Tech — Solusi Digital & Otomatisasi
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+                    Partner AI & Otomatisasi Terpercaya untuk <span class="text-primary">Kemajuan Bisnismu</span>
+                </h1>
+                <p class="text-slate-600 text-lg md:text-xl font-normal leading-relaxed">
+                    Kami mengintegrasikan **Google Apps Script**, **Web Builder Modern**, dan **AI Workflow** untuk menghemat waktu & meningkatkan produktivitas bisnismu.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#layanan" class="bg-primary hover:bg-blue-700 text-white font-semibold px-7 py-3.5 rounded-full shadow-lg shadow-blue-500/25 transition text-sm flex items-center gap-2">
+                        <span>Eksplor Layanan</span> ↗
+                    </a>
+                    <a href="#kelas" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold px-7 py-3.5 rounded-full border border-slate-200 transition text-sm">
+                        Lihat Kelas
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION LAYANAN -->
-    <section id="layanan" class="py-20 bg-slate-950 border-t border-slate-800/80">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-white">Layanan Unggulan</h2>
-                <p class="text-slate-400 mt-3">Solusi teknologi praktis yang siap membantu pengembangan bisnis dan karirmu.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition group">
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+    <!-- SECTION LAYANAN (Bento Cards Grid) -->
+    <section id="layanan" class="py-12 max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-bold text-primary uppercase tracking-widest">Solusi Cerdas</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Layanan Utama</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Service 1 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-md shadow-slate-200/50 hover:shadow-xl hover:border-blue-300 transition duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
                         📊
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Google Apps Script & Automation</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Otomatisasi sistem invoice, laporan penjualan, sistem perhitungan kustom (seperti skor olahraga), dan integrasi WhatsApp di Google Sheets.
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Google Apps Script</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Otomatisasi invoice, rekap laporan penjualan, kalkulator kustom, dan notifikasi WhatsApp langsung di Google Sheets.
                     </p>
                 </div>
-                <!-- Service 2 -->
-                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition group">
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+            </div>
+            <!-- Service 2 (Featured Card Blue) -->
+            <div class="bg-primary p-8 rounded-3xl shadow-xl shadow-blue-500/20 text-white flex flex-col justify-between relative overflow-hidden">
+                <div class="relative z-10">
+                    <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mb-6 backdrop-blur-md">
                         🤖
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">AI Consultation & Builder</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Integrasi ChatGPT / Gemini API ke dalam alur kerja bisnismu untuk menjawab kustom layanan pelanggan secara otomatis.
+                    <h3 class="text-xl font-bold text-white mb-3">AI Consultation</h3>
+                    <p class="text-blue-100 text-sm leading-relaxed">
+                        Integrasi ChatGPT & Gemini API ke dalam sistem bisnis untuk merangkum data dan melayani pelanggan secara otomatis.
                     </p>
                 </div>
-                <!-- Service 3 -->
-                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition group">
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+            </div>
+            <!-- Service 3 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-md shadow-slate-200/50 hover:shadow-xl hover:border-blue-300 transition duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
                         💻
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Custom Web Builder</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Pembuatan landing page produk, web portofolio, dan aplikasi web khusus yang siap pakai, cepat, dan responsif.
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Custom Web Builder</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Pembuatan landing page, web portofolio, dan aplikasi web interaktif yang modern, cepat, dan terintegrasi Netlify.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION PRODUK DIGITAL -->
-    <section id="produk" class="py-20 max-w-6xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-xs font-semibold text-accent uppercase tracking-wider">Siap Pakai</span>
-            <h2 class="text-3xl font-bold text-white mt-1">Katalog Produk Digital</h2>
-            <p class="text-slate-400 mt-3">Template otomatisasi dan alat bantu kerja berbasis Google Apps Script yang bisa langsung kamu gunakan.</p>
+    <!-- SECTION PRODUK DIGITAL (Pill Badges & Light Cards) -->
+    <section id="produk" class="py-12 max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-bold text-primary uppercase tracking-widest">Produk Siap Pakai</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Katalog Produk Digital</h2>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Product 1: Padel Score System -->
-            <div class="bg-slate-900 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-blue-500/40 transition">
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Product 1: Padel Score -->
+            <div class="bg-white rounded-3xl border border-slate-200/80 p-7 flex flex-col justify-between shadow-md hover:shadow-xl transition">
                 <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-full">Google Sheets GAS</span>
-                        <span class="text-lg font-bold text-white">Rp 49.000</span>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3.5 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-full">Google Sheets GAS</span>
+                        <span class="text-base font-extrabold text-slate-900">Rp 49.000</span>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Padel Match Score Calculator</h3>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                        Template Google Sheets + Google Apps Script untuk mencatat dan menghitung skor pertandingan Padel secara akurat dan otomatis.
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Padel Match Score Calculator</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Template Google Sheets + Apps Script untuk kalkulasi skor pertandingan Padel dan pencatatan log otomatis.
                     </p>
-                    <ul class="text-xs text-slate-300 space-y-2 mb-6">
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Logika Penghitungan Otomatis</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Full Source Code Apps Script</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Sekali Beli untuk Selamanya</li>
-                    </ul>
                 </div>
-                <a href="https://wa.me/6285121178423?text=Halo%20SelBa%20Tech,%20saya%20tertarik%20membeli%20Template%20Padel%20Score%20Calculator" target="_blank" class="w-full bg-slate-800 hover:bg-primary text-white text-center font-medium py-2.5 rounded-xl transition text-sm">
+                <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20tertarik%20membeli%20Template%20Padel%20Score%20Calculator" target="_blank" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-900 text-center font-bold py-3 rounded-2xl transition text-xs">
                     Beli Template
                 </a>
             </div>
 
             <!-- Product 2 -->
-            <div class="bg-slate-900 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-blue-500/40 transition">
+            <div class="bg-white rounded-3xl border border-slate-200/80 p-7 flex flex-col justify-between shadow-md hover:shadow-xl transition">
                 <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full">Otomatisasi Bisnis</span>
-                        <span class="text-lg font-bold text-white">Rp 99.000</span>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3.5 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full">Otomatisasi Bisnis</span>
+                        <span class="text-base font-extrabold text-slate-900">Rp 99.000</span>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Smart Auto-Invoice & WA Notifier</h3>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                        Template Google Sheets yang otomatis merubah data transaksi menjadi invoice PDF dan mengirimkan link ke WhatsApp pembeli.
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Smart Auto-Invoice & WA Notifier</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Otomatis ubah transaksi Google Sheets jadi invoice PDF dan kirim via pesan WhatsApp otomatis ke pembeli.
                     </p>
-                    <ul class="text-xs text-slate-300 space-y-2 mb-6">
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Integrasi WA Gateway API</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Video Panduan Setup (5 Menit)</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Tanpa Biaya Langganan Bulanan</li>
-                    </ul>
                 </div>
-                <a href="https://wa.me/6285121178423?text=Halo%20SelBa%20Tech,%20saya%20tertarik%20membeli%20Smart%20Auto-Invoice%20Template" target="_blank" class="w-full bg-slate-800 hover:bg-primary text-white text-center font-medium py-2.5 rounded-xl transition text-sm">
+                <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20tertarik%20membeli%20Smart%20Auto-Invoice%20Template" target="_blank" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-900 text-center font-bold py-3 rounded-2xl transition text-xs">
                     Beli Template
                 </a>
             </div>
 
             <!-- Product 3 -->
-            <div class="bg-slate-900 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-blue-500/40 transition">
+            <div class="bg-white rounded-3xl border border-slate-200/80 p-7 flex flex-col justify-between shadow-md hover:shadow-xl transition">
                 <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-full">AI Workflow</span>
-                        <span class="text-lg font-bold text-white">Rp 149.000</span>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3.5 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded-full">AI Workflow</span>
+                        <span class="text-base font-extrabold text-slate-900">Rp 149.000</span>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Gemini AI Assistant for Google Docs</h3>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                        Script kustom di Google Docs untuk membuat draf artikel, merangkum dokumen, dan menerjemahkan otomatis dengan AI.
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Gemini AI Assistant for Docs</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Script tambahan Google Docs untuk buat draf artikel, merangkum dokumen, dan menerjemahkan dengan AI.
                     </p>
-                    <ul class="text-xs text-slate-300 space-y-2 mb-6">
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Pakai Gemini API Key Gratis</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Ready-to-use Prompt Template</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Lifetime Update Script</li>
-                    </ul>
                 </div>
-                <a href="https://wa.me/6285121178423?text=Halo%20SelBa%20Tech,%20saya%20tertarik%20membeli%20Gemini%20AI%20Assistant%20Script" target="_blank" class="w-full bg-slate-800 hover:bg-primary text-white text-center font-medium py-2.5 rounded-xl transition text-sm">
+                <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20tertarik%20membeli%20Gemini%20AI%20Assistant%20Script" target="_blank" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-900 text-center font-bold py-3 rounded-2xl transition text-xs">
                     Beli Script
                 </a>
             </div>
@@ -198,86 +197,56 @@
     </section>
 
     <!-- SECTION KELAS & MENTORING -->
-    <section id="kelas" class="py-20 bg-slate-950 border-t border-b border-slate-800/80">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs font-semibold text-primary uppercase tracking-wider">Belajar Bareng SelBa Tech</span>
-                <h2 class="text-3xl font-bold text-white mt-1">Kelas & Program Mentoring</h2>
-                <p class="text-slate-400 mt-3">Tingkatkan skill otomatisasi dan AI-mu dari nol sampai bisa buat proyek sendiri.</p>
+    <section id="kelas" class="py-12 max-w-6xl mx-auto px-6">
+        <div class="bg-white/90 rounded-4xl p-8 md:p-12 border border-slate-200/90 shadow-xl shadow-slate-200/50">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-primary uppercase tracking-widest">Edukasi & Mentoring</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Program Belajar SelBa Tech</h2>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Class 1 -->
-                <div class="bg-slate-900 rounded-3xl p-8 border border-slate-800 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-extrabold uppercase px-4 py-1.5 rounded-bl-xl tracking-wider">
-                        Populer
-                    </div>
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 flex flex-col justify-between">
                     <div>
-                        <span class="text-xs font-semibold text-accent uppercase">Live Mentoring & Recording</span>
-                        <h3 class="text-2xl font-bold text-white mt-2 mb-4">Bootcamp: Google Apps Script Masterclass</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            Kuasai pembuatan otomatisasi Google Sheets, logika kalkulasi, pembuatan PDF Invoice otomatis, hingga broadcast WhatsApp.
-                        </p>
-
-                        <div class="space-y-3 mb-8">
-                            <div class="flex items-center text-sm text-slate-300">
-                                <span class="w-6 text-primary font-bold">✓</span> 4 Pertemuan Live via Zoom + Sesi Q&A
-                            </div>
-                            <div class="flex items-center text-sm text-slate-300">
-                                <span class="w-6 text-primary font-bold">✓</span> Akses Rekaman Selamanya + Source Code
-                            </div>
-                            <div class="flex items-center text-sm text-slate-300">
-                                <span class="w-6 text-primary font-bold">✓</span> Studi Kasus Nyata (Stok, Skor, Invoice)
-                            </div>
-                            <div class="flex items-center text-sm text-slate-300">
-                                <span class="w-6 text-primary font-bold">✓</span> Grup Diskusi Komunitas
-                            </div>
+                        <div class="inline-block px-3 py-1 bg-primary text-white text-[10px] font-extrabold uppercase rounded-full mb-4">
+                            Bootcamp Interactive
                         </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Google Apps Script Masterclass</h3>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Kuasai otomatisasi Google Sheets, pembuatan PDF invoice otomatis, hingga broadcast WhatsApp dari nol.
+                        </p>
                     </div>
 
-                    <div class="pt-6 border-t border-slate-800 flex items-center justify-between">
+                    <div class="pt-6 border-t border-slate-200 flex items-center justify-between">
                         <div>
-                            <span class="text-xs text-slate-500 line-through block">Rp 500.000</span>
-                            <span class="text-2xl font-extrabold text-white">Rp 249.000</span>
+                            <span class="text-xs text-slate-400 line-through block">Rp 500.000</span>
+                            <span class="text-2xl font-black text-slate-900">Rp 249.000</span>
                         </div>
-                        <a href="https://wa.me/6285121178423?text=Halo%20SelBa%20Tech,%20saya%20mau%20daftar%20Bootcamp%20Google%20Apps%20Script" target="_blank" class="bg-primary hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition text-sm shadow-lg shadow-blue-500/20">
-                            Daftar Kelas
+                        <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20mau%20daftar%20Bootcamp%20Google%20Apps%20Script" target="_blank" class="bg-primary hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-full transition text-xs shadow-md shadow-blue-500/20">
+                            Daftar Sekarang
                         </a>
                     </div>
                 </div>
 
                 <!-- Class 2 -->
-                <div class="bg-slate-900 rounded-3xl p-8 border border-slate-800 flex flex-col justify-between">
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 flex flex-col justify-between">
                     <div>
-                        <span class="text-xs font-semibold text-accent uppercase">1-on-1 Intensive</span>
-                        <h3 class="text-2xl font-bold text-white mt-2 mb-4">Private Mentoring: AI & Web Builder for Business</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            Mentoring privat langsung bersama tim SelBa Tech untuk membangun sistem AI & website khusus sesuai kebutuhan bisnismu.
-                        </p>
-
-                        <div class="space-y-3 mb-8">
-                            <div class="flex items-center text-sm text-slate-300">
-                                <span class="w-6 text-primary font-bold">✓</span> Kurikulum Kustom Sesuai Kebutuhan
-                            </div>
-                            <div class="flex items-center text-sm text-slate-300">
-                                <span class="w-6 text-primary font-bold">✓</span> Dibantu Sampai Proyek Web/AI Selesai
-                            </div>
-                            <div class="flex items-center text-sm text-slate-300">
-                                <span class="w-6 text-primary font-bold">✓</span> Review Code & Bimbingan Direct
-                            </div>
-                            <div class="flex items-center text-sm text-slate-300">
-                                <span class="w-6 text-primary font-bold">✓</span> Konsultasi Bisnis Digital
-                            </div>
+                        <div class="inline-block px-3 py-1 bg-dark text-white text-[10px] font-extrabold uppercase rounded-full mb-4">
+                            Private 1-on-1
                         </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">AI & Web Builder for Business</h3>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Mentoring intensif privat langsung dibimbing membangun sistem AI & website khusus sesuai kebutuhan bisnismu.
+                        </p>
                     </div>
 
-                    <div class="pt-6 border-t border-slate-800 flex items-center justify-between">
+                    <div class="pt-6 border-t border-slate-200 flex items-center justify-between">
                         <div>
-                            <span class="text-2xl font-extrabold text-white">Rp 499.000</span>
-                            <span class="text-xs text-slate-400 block">/ Sesi Privat</span>
+                            <span class="text-2xl font-black text-slate-900">Rp 499.000</span>
+                            <span class="text-xs text-slate-500 block">/ Sesi Privat</span>
                         </div>
-                        <a href="https://wa.me/6285121178423?text=Halo%20SelBa%20Tech,%20saya%20mau%20konsultasi%20Private%20Mentoring" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-6 py-3 rounded-xl transition text-sm">
-                            Konsultasi Dulu
+                        <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20mau%20konsultasi%20Private%20Mentoring" target="_blank" class="bg-dark hover:bg-slate-800 text-white font-bold px-6 py-3 rounded-full transition text-xs">
+                            Konsultasi
                         </a>
                     </div>
                 </div>
@@ -286,98 +255,66 @@
     </section>
 
     <!-- SECTION PROYEK / PORTOFOLIO -->
-    <section id="portofolio" class="py-20 max-w-6xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-            <div>
-                <span class="text-xs font-semibold text-accent uppercase tracking-wider">Hasil Karya</span>
-                <h2 class="text-3xl font-bold text-white mt-1">Proyek & Showcase</h2>
-                <p class="text-slate-400 mt-2">Sistem otomatisasi dan aplikasi yang telah dikembangkan.</p>
-            </div>
+    <section id="portofolio" class="py-12 max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-bold text-primary uppercase tracking-widest">Showcase</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Proyek Terbarukan</h2>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-3 gap-6">
             <!-- Project 1: Padel Score -->
-            <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:border-blue-500/50 transition flex flex-col justify-between">
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs font-semibold text-accent uppercase tracking-wider">Google Apps Script</span>
-                        <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full">Sports Tech</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Padel Match Score Calculator</h3>
-                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                        Sistem penghitungan skor dan pencatatan log pertandingan Padel otomatis di Google Sheets dengan logika kustom Apps Script.
+            <div class="bg-white rounded-3xl border border-slate-200/80 p-6 flex flex-col justify-between shadow-md">
+                <div>
+                    <span class="text-[10px] font-extrabold uppercase px-3 py-1 bg-blue-50 text-blue-600 rounded-full">Google Apps Script</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-3 mb-2">Padel Match Score Calculator</h3>
+                    <p class="text-slate-600 text-xs mb-4 leading-relaxed">
+                        Aplikasi pencatat dan penghitung skor Padel otomatis berbasis Google Sheets + Apps Script.
                     </p>
-                    <div class="flex wrap gap-2 text-xs mb-6">
-                        <span class="bg-slate-800 px-2.5 py-1 rounded text-slate-300">Google Sheets</span>
-                        <span class="bg-slate-800 px-2.5 py-1 rounded text-slate-300">Custom GAS</span>
-                    </div>
                 </div>
-                <div class="p-6 pt-0 border-t border-slate-800/50 mt-auto">
-                    <!-- Ganti link href di bawah dengan link copy Google Sheets Padel kamu -->
-                    <a href="https://docs.google.com/spreadsheets/d/1s8oSNYPHV56hdw3BVsPHxwDsIPQfkuyrMg2t9wBM-MQ/edit?gid=921741412#gid=921741412" target="_blank" class="w-full bg-primary/10 hover:bg-primary text-blue-400 hover:text-white border border-blue-500/30 text-center font-medium py-2 rounded-xl transition text-xs block">
-                        🚀 Try Live Demo (Google Sheets)
-                    </a>
-                </div>
+                <a href="https://docs.google.com/spreadsheets/d/YOUR_PADEL_SHEET_ID/copy" target="_blank" class="w-full bg-blue-50 hover:bg-primary hover:text-white text-primary border border-blue-200 text-center font-bold py-2.5 rounded-xl transition text-xs block">
+                    🚀 Try Live Demo
+                </a>
             </div>
 
             <!-- Project 2 -->
-            <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:border-slate-700 transition flex flex-col justify-between">
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs font-semibold text-accent uppercase tracking-wider">Automation</span>
-                        <span class="text-xs bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full">Business Tool</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Invoice & WA Auto-Send</h3>
-                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">Aplikasi Google Sheets yang secara otomatis membuat PDF invoice dan mengirimkannya langsung ke pelanggan via WhatsApp.</p>
-                    <div class="flex gap-2 text-xs mb-6">
-                        <span class="bg-slate-800 px-2.5 py-1 rounded text-slate-300">Apps Script</span>
-                        <span class="bg-slate-800 px-2.5 py-1 rounded text-slate-300">WA API</span>
-                    </div>
+            <div class="bg-white rounded-3xl border border-slate-200/80 p-6 flex flex-col justify-between shadow-md">
+                <div>
+                    <span class="text-[10px] font-extrabold uppercase px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full">Automation</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-3 mb-2">Invoice & WA Auto-Send</h3>
+                    <p class="text-slate-600 text-xs mb-4 leading-relaxed">Sistem pembuatan PDF invoice dan pengiriman otomatis via WhatsApp API.</p>
                 </div>
-                <div class="p-6 pt-0 border-t border-slate-800/50 mt-auto">
-                    <a href="https://wa.me/6285121178423?text=Halo%20SelBa%20Tech,%20saya%20tertarik%20dengan%20Sistem%20Invoice%20WA" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-300 text-center font-medium py-2 rounded-xl transition text-xs block">
-                        Tanya Detail Proyek
-                    </a>
-                </div>
+                <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20tertarik%20dengan%20Sistem%20Invoice%20WA" target="_blank" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-center font-bold py-2.5 rounded-xl transition text-xs block">
+                    Detail Proyek
+                </a>
             </div>
 
             <!-- Project 3 -->
-            <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:border-slate-700 transition flex flex-col justify-between">
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs font-semibold text-accent uppercase tracking-wider">AI Integration</span>
-                        <span class="text-xs bg-purple-500/10 text-purple-400 px-2.5 py-1 rounded-full">AI Workflow</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">AI Customer Support Assistant</h3>
-                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">Integrasi Gemini API pada Google Form untuk merangkum dan membalas keluhan pelanggan secara otomatis.</p>
-                    <div class="flex gap-2 text-xs mb-6">
-                        <span class="bg-slate-800 px-2.5 py-1 rounded text-slate-300">Gemini API</span>
-                        <span class="bg-slate-800 px-2.5 py-1 rounded text-slate-300">Apps Script</span>
-                    </div>
+            <div class="bg-white rounded-3xl border border-slate-200/80 p-6 flex flex-col justify-between shadow-md">
+                <div>
+                    <span class="text-[10px] font-extrabold uppercase px-3 py-1 bg-purple-50 text-purple-600 rounded-full">AI Workflow</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-3 mb-2">AI Customer Support</h3>
+                    <p class="text-slate-600 text-xs mb-4 leading-relaxed">Integrasi Gemini API pada Google Form untuk merangkum dan membalas keluhan otomatis.</p>
                 </div>
-                <div class="p-6 pt-0 border-t border-slate-800/50 mt-auto">
-                    <a href="https://wa.me/6285121178423?text=Halo%20SelBa%20Tech,%20saya%20tertarik%20konsultasi%20AI%20Customer%20Support" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-300 text-center font-medium py-2 rounded-xl transition text-xs block">
-                        Tanya Detail Proyek
-                    </a>
-                </div>
+                <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20tertarik%20konsultasi%20AI%20Customer%20Support" target="_blank" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-center font-bold py-2.5 rounded-xl transition text-xs block">
+                    Detail Proyek
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER / KONTAK -->
-    <footer id="kontak" class="bg-slate-950 border-t border-slate-800 py-12">
-        <div class="max-w-6xl mx-auto px-6 text-center md:flex md:justify-between md:items-center">
-            <div class="mb-6 md:mb-0 text-left">
-                <a href="#" class="text-2xl font-extrabold text-white">SelBa<span class="text-primary">.Tech</span></a>
-                <p class="text-slate-500 text-sm mt-1">Sela Belajar Tech — Belajar & Tumbuh Bersama Teknologi.</p>
+    <!-- FOOTER -->
+    <footer id="kontak" class="bg-white border-t border-slate-200 py-12 mt-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <a href="#" class="text-2xl font-extrabold text-slate-900">SelBa<span class="text-primary">.Tech</span></a>
+                <p class="text-slate-500 text-xs mt-1">Sela Belajar Tech — Belajar & Tumbuh Bersama Teknologi.</p>
             </div>
-            <div class="flex flex-col md:flex-row gap-4 items-center text-slate-400 text-sm">
-                <a href="https://wa.me/6285121178423?text=Halo%20SelBa%20Tech" target="_blank" class="hover:text-primary transition">💬 WhatsApp</a>
-                <span class="hidden md:inline">•</span>
-                <a href="mailto:selabelajartech@gmail.com" class="hover:text-primary transition">✉️ Email SelBa Tech</a>
+            <div class="flex gap-6 text-sm font-semibold text-slate-600">
+                <a href="https://wa.me/6281234567890" target="_blank" class="hover:text-primary transition">💬 WhatsApp</a>
+                <a href="mailto:selabelajartech@gmail.com" class="hover:text-primary transition">✉️ Email</a>
             </div>
         </div>
-        <div class="max-w-6xl mx-auto px-6 mt-8 pt-8 border-t border-slate-900 text-center text-xs text-slate-600">
+        <div class="max-w-6xl mx-auto px-6 mt-8 pt-6 border-t border-slate-100 text-center text-xs text-slate-400">
             &copy; 2026 SelBa Tech. All rights reserved.
         </div>
     </footer>
