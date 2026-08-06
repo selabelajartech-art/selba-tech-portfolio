@@ -46,100 +46,514 @@
             </a>
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
                 <a href="index.html" class="hover:text-primary transition">← Kembali ke Beranda</a>
-                <a href="#katalog" class="hover:text-primary transition">Daftar Prompt</a>
+                <a href="#katalog" class="hover:text-primary transition">Katalog Prompt</a>
                 <a href="#kustom" class="hover:text-primary transition">Request Prompt</a>
             </div>
-            <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20ingin%20tanya%20mengenai%20AI%20Prompt" target="_blank" class="bg-dark hover:bg-slate-800 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition shadow-md">
-                Konsultasi Prompt
+            <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20ingin%20konsultasi%20AI%20Prompt" target="_blank" class="bg-dark hover:bg-slate-800 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition shadow-md">
+                Konsultasi AI
             </a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="pt-36 pb-12 px-6 max-w-6xl mx-auto text-center">
+    <section class="pt-36 pb-10 px-6 max-w-6xl mx-auto text-center">
         <div class="bg-white/80 backdrop-blur-md border border-slate-200/90 rounded-4xl p-8 md:p-12 shadow-xl shadow-slate-200/60">
             <span class="px-4 py-1.5 bg-blue-50 border border-blue-200 rounded-full text-primary text-xs font-bold uppercase tracking-wider">
-                🤖 SelBa Prompt Hub
+                🤖 SelBa AI Prompt Library
             </span>
             <h1 class="text-3xl md:text-5xl font-black text-slate-900 mt-4 leading-tight">
-                Kumpulan AI Prompt Siap Pakai untuk <span class="text-primary">Bisnis & Produktivitas</span>
+                30+ AI Prompt Premium untuk <span class="text-primary">GAS, Automation & Bisnis</span>
             </h1>
             <p class="text-slate-600 text-base md:text-lg mt-3 max-w-2xl mx-auto">
-                Tingkatkan kualitas output ChatGPT, Gemini, dan Claude milikmu secara instant dengan struktur prompt profesional pilihan SelBa Tech.
+                Koleksi prompt engineering siap pakai untuk mengoptimalkan Google Apps Script, perbaikan error, hingga otomatisasi workflow tim Anda.
             </p>
         </div>
     </section>
 
     <!-- PROMPT CATALOG GRID -->
-    <section id="katalog" class="py-8 max-w-6xl mx-auto px-6 w-full">
-        <!-- Filter Tabs / Categories -->
-        <div class="flex flex-wrap gap-2 justify-center mb-10">
-            <span class="px-5 py-2 bg-primary text-white rounded-full text-xs font-bold cursor-pointer shadow-md shadow-blue-500/20">Semua Prompt</span>
-            <span class="px-5 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold cursor-pointer border border-slate-200">Google Apps Script & Coding</span>
-            <span class="px-5 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold cursor-pointer border border-slate-200">Bisnis & Sales</span>
-            <span class="px-5 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold cursor-pointer border border-slate-200">Content Creation</span>
+    <section id="katalog" class="py-6 max-w-6xl mx-auto px-6 w-full">
+        
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-2 justify-center mb-10" id="filter-container">
+            <button onclick="filterCategory('all', this)" class="filter-btn px-5 py-2.5 bg-primary text-white rounded-full text-xs font-bold transition shadow-md shadow-blue-500/20 border border-transparent">
+                Semua Prompt (30)
+            </button>
+            <button onclick="filterCategory('gas', this)" class="filter-btn px-5 py-2.5 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                ⚙️ GAS Logic & Fundamentals
+            </button>
+            <button onclick="filterCategory('error', this)" class="filter-btn px-5 py-2.5 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                🛠️ Error & Debugging
+            </button>
+            <button onclick="filterCategory('workspace', this)" class="filter-btn px-5 py-2.5 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                📂 Google Workspace
+            </button>
+            <button onclick="filterCategory('api', this)" class="filter-btn px-5 py-2.5 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                🌐 API & Web Apps
+            </button>
+            <button onclick="filterCategory('bisnis', this)" class="filter-btn px-5 py-2.5 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                💼 Bisnis & Delivery
+            </button>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
+        <!-- Cards Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="prompt-grid">
 
-            <!-- Prompt Item 1 -->
-            <div class="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-md hover:shadow-xl transition flex flex-col justify-between">
+            <!-- KATEGORI 1: GAS LOGIC -->
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gas">
                 <div>
                     <div class="flex justify-between items-center mb-3">
-                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">Coding & GAS</span>
-                        <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded-full">GRATIS</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">GAS Logic</span>
+                        <span class="text-[10px] font-bold text-slate-400">#01</span>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Apps Script Error Debugger & Fixer</h3>
-                    <p class="text-slate-600 text-xs mb-4 leading-relaxed">
-                        Prompt kustom untuk menganalisis kode Google Apps Script yang error dan memberikan solusi perbaikan beserta penjelasannya.
-                    </p>
-                    <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-slate-500 text-[11px] font-mono mb-6 italic line-clamp-3">
-                        "Bertindaklah sebagai Google Apps Script Senior Engineer. Analisis kode GAS berikut dan temukan bug/error..."
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Otomatisasi Rekap Data Sheets</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Merekap baris data otomatis dari sheet input ke sheet rekap saat status berubah.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Bertindaklah sebagai Senior Google Apps Script Developer. Saya ingin membuat fungsi di Google Sheets yang secara otomatis merekap baris data dari sheet "Input_Transaksi" ke sheet "Rekap_Bulanan" setiap kali kolom status diubah menjadi "SELESAI". Buatkan kodenya lengkap dengan penjelasannya baris demi baris, dan pastikan menggunakan penanganan OnEdit event secara efisien.</pre>
                     </div>
                 </div>
-                <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20mau%20minta%20Prompt%20GAS%20Debugger" target="_blank" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-900 text-center font-bold py-2.5 rounded-xl transition text-xs block">
-                    Dapatkan Prompt
-                </a>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
             </div>
 
-            <!-- Prompt Item 2 -->
-            <div class="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-md hover:shadow-xl transition flex flex-col justify-between">
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gas">
                 <div>
                     <div class="flex justify-between items-center mb-3">
-                        <span class="px-3 py-1 bg-purple-50 text-purple-700 text-[10px] font-bold rounded-full">Bisnis & Sales</span>
-                        <span class="text-sm font-extrabold text-slate-900">Rp 25.000</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">GAS Logic</span>
+                        <span class="text-[10px] font-bold text-slate-400">#02</span>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">SOP Generator & Workflow Maker</h3>
-                    <p class="text-slate-600 text-xs mb-4 leading-relaxed">
-                        Prompt untuk mengubah alur kerja acak tim menjadi Standar Operasional Prosedur (SOP) yang rapi dan siap pakai.
-                    </p>
-                    <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-slate-500 text-[11px] font-mono mb-6 italic line-clamp-3">
-                        "Buatkan SOP langkah demi langkah untuk proses operasional [Sebutkan Bisnis] dengan format tabel ringkas..."
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Form Validator & Custom Email</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Validasi domain email respon Google Form dan kirimkan email balasan otomatis.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan fungsi Apps Script yang terhubung dengan Google Form. Ketika ada respon baru, cek apakah email pengirim berakhiran domain perusahaan (@perusahaan.com). Jika ya, kirimkan email konfirmasi otomatis berisi ringkasan jawaban mereka dalam format HTML yang rapi. Jika tidak, tandai baris di Sheet dengan warna merah.</pre>
                     </div>
                 </div>
-                <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20mau%20beli%20Prompt%20SOP%20Generator" target="_blank" class="w-full bg-primary hover:bg-blue-700 text-white text-center font-bold py-2.5 rounded-xl transition text-xs block shadow-md shadow-blue-500/10">
-                    Beli Prompt (Rp 25k)
-                </a>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
             </div>
 
-            <!-- Prompt Item 3 -->
-            <div class="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-md hover:shadow-xl transition flex flex-col justify-between">
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gas">
                 <div>
                     <div class="flex justify-between items-center mb-3">
-                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full">Content Creation</span>
-                        <span class="text-sm font-extrabold text-slate-900">Rp 35.000</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">GAS Logic</span>
+                        <span class="text-[10px] font-bold text-slate-400">#03</span>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">High-Converting Copywriting Bundle</h3>
-                    <p class="text-slate-600 text-xs mb-4 leading-relaxed">
-                        Kumpulan 5 prompt untuk membuat teks promosi WhatsApp, landing page, dan caption media sosial dengan formula AIDA & PAS.
-                    </p>
-                    <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-slate-500 text-[11px] font-mono mb-6 italic line-clamp-3">
-                        "Tuliskan naskah promosi WhatsApp yang persuasif menggunakan kerangka AIDA untuk produk..."
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Custom Menu & Sidebar Generator</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Membuat menu kustom di Google Sheets beserta UI Sidebar HTML bawaan.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Tuliskan kode Google Apps Script untuk membuat custom menu bernama "🚀 SelBa Tools" di Google Sheets. Menu ini harus memiliki 3 item submenu: "Proses Data", "Kirim WhatsApp", dan "Buka Sidebar Settings". Buatkan juga kode HTML dasar untuk Sidebar-nya.</pre>
                     </div>
                 </div>
-                <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20mau%20beli%20Bundle%20Prompt%20Copywriting" target="_blank" class="w-full bg-primary hover:bg-blue-700 text-white text-center font-bold py-2.5 rounded-xl transition text-xs block shadow-md shadow-blue-500/10">
-                    Beli Bundle (Rp 35k)
-                </a>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gas">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">GAS Logic</span>
+                        <span class="text-[10px] font-bold text-slate-400">#04</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Dynamic Cascading Dropdown</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Membuat dropdown bertingkat yang opsi sub-kategorinya berubah otomatis.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Saya butuh script Google Apps Script untuk membuat Cascading Dropdown List di Google Sheets. Jika sel di Kolom A (Kategori) dipilih, maka validasi data di Kolom B (Sub-Kategori) akan otomatis berubah menyesuaikan daftar yang ada di sheet "Master_Data".</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gas">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">GAS Logic</span>
+                        <span class="text-[10px] font-bold text-slate-400">#05</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Kalkulasi Skor & Ranking Otomatis</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Fungsi kustom untuk menghitung total poin dan menentukan peringkat otomatis.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan fungsi Apps Script kustom (`CUSTOM_RANK_CALCULATOR`) yang menerima input range data pertandingan/skor olahraga (seperti Padel/Tenis), lalu menghitung jumlah kemenangan, total poin, dan menentukan urutan peringkat secara otomatis tanpa merusak formulasi sheet.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gas">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">GAS Logic</span>
+                        <span class="text-[10px] font-bold text-slate-400">#06</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Auto-Archive Data Berdasarkan Tanggal</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Time-driven trigger untuk memindahkan data lama ke sheet arsip secara terjadwal.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script Time-Driven Trigger di Apps Script yang berjalan setiap hari pukul 23:00. Script ini harus mendeteksi data di Sheet "Active_Tasks" yang tanggalnya sudah lewat lebih dari 30 hari, lalu memindahkannya (move) ke Sheet "Archive_Tasks" agar sheet utama tetap ringan.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <!-- KATEGORI 2: ERROR & DEBUGGING -->
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="error">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-amber-50 text-amber-700 text-[10px] font-bold rounded-full">Error & Debug</span>
+                        <span class="text-[10px] font-bold text-slate-400">#07</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">GAS Error Debugger & Line Fixer</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Prompt untuk mendiagnosis baris kode yang menyebabkan error dan perbaikannya.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Bertindaklah sebagai Expert Code Debugger. Kode Google Apps Script berikut mengalami error:
+[TEMPEL_KODE_ERROR]
+Pesan error yang muncul di Execution Log: "[TEMPEL_PESAN_ERROR]"
+Identifikasi penyebab utamanya, berikan kode perbaikannya, dan jelaskan mengapa error tersebut terjadi.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="error">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-amber-50 text-amber-700 text-[10px] font-bold rounded-full">Error & Debug</span>
+                        <span class="text-[10px] font-bold text-slate-400">#08</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Exception Handling & Error Logger</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Menambahkan try-catch agar script tidak crash dan mencatat log otomatis.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Ubah kode Google Apps Script di bawah ini agar memiliki struktur Try-Catch yang aman. Jika terjadi error, script tidak boleh crash tetapi harus mencatat pesan error, timestamp, dan nama fungsi ke dalam Sheet khusus bernama "System_Logs", serta mengirimkan notifikasi email singkat ke admin.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="error">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-amber-50 text-amber-700 text-[10px] font-bold rounded-full">Error & Debug</span>
+                        <span class="text-[10px] font-bold text-slate-400">#09</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Bypass Execution Timeout Limit</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Solusi mengatasi error batas waktu 6 menit dengan teknik Continuation Token.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Script Google Apps Script saya sering terkena error "Exceeded maximum execution time" karena memproses ribuan data. Tolong rekomendasikan dan buatkan pola koding Batch Processing / Continuation Token menggunakan PropertiesService agar script bisa melanjutkan eksekusi dari posisi terakhir.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="error">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-amber-50 text-amber-700 text-[10px] font-bold rounded-full">Error & Debug</span>
+                        <span class="text-[10px] font-bold text-slate-400">#10</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Performance & Refactoring Optimizer</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Mengubah kodingan berulang lambat menjadi teknik Batch Operation cepat.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Kode GAS berikut terasa sangat lambat karena melakukan read/write sel satu per satu di dalam perulangan (looping): [TEMPEL_KODE]. Tolong optimalkan kode ini menggunakan teknik Batch Operation (getValues() dan setValues()) dalam bentuk Array JavaScript agar prosesnya jauh lebih cepat.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="error">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-amber-50 text-amber-700 text-[10px] font-bold rounded-full">Error & Debug</span>
+                        <span class="text-[10px] font-bold text-slate-400">#11</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">OAuth Scope & Permission Fixer</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Mengatasi isu perizinan / scope saat script dijalankan oleh user lain.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Klien saya mendapatkan error "Exception: You do not have permission to call..." saat menjalankan script. Buatkan daftar langkah pemecahan masalah (troubleshooting) untuk klien awam, dan tunjukkan cara mengatur file appsscript.json (Manifest) untuk memperjelas OAuth Scopes yang dibutuhkan.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="error">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-amber-50 text-amber-700 text-[10px] font-bold rounded-full">Error & Debug</span>
+                        <span class="text-[10px] font-bold text-slate-400">#12</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Null / Undefined Array Cleaner</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Helper function untuk membersihkan array dari sel kosong agar tidak error.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Saya mengambil data dari Google Sheets menggunakan getValues(), namun sering dapat error saat memproses sel kosong. Buatkan fungsi pembantu (helper function) di JavaScript/GAS untuk membersihkan array dari sel kosong (null, undefined, atau "") sebelum dikalkulasi.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <!-- KATEGORI 3: GOOGLE WORKSPACE -->
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="workspace">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-purple-50 text-purple-700 text-[10px] font-bold rounded-full">Workspace</span>
+                        <span class="text-[10px] font-bold text-slate-400">#13</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Auto-Generate PDF Invoice dari Docs</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Membaca data Sheets, mengganti placeholder di Docs, dan ekspor ke PDF.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script GAS yang membaca data transaksi di Google Sheets, mengganti placeholder teks (seperti {{Nama_Klien}}, {{Total}}, {{Tanggal}}) pada template Google Docs, mengubah Docs tersebut menjadi PDF, dan menyimpannya di folder Google Drive tertentu.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="workspace">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-purple-50 text-purple-700 text-[10px] font-bold rounded-full">Workspace</span>
+                        <span class="text-[10px] font-bold text-slate-400">#14</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Bulk Email Sender + Lampiran Drive</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Pengiriman email masal otomatis lengkap dengan lampiran PDF spesifik.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script untuk mengirim email masal lewat GmailApp. Data penerima ada di Sheet (Kolom Email, Nama, NamaFilePDF). Script harus mengambil file PDF sesuai nama file di Google Drive, memampatkannya sebagai lampiran email, dan menyertakan quota check (MailApp.getRemainingDailyQuota()).</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="workspace">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-purple-50 text-purple-700 text-[10px] font-bold rounded-full">Workspace</span>
+                        <span class="text-[10px] font-bold text-slate-400">#15</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Google Calendar Auto-Schedule</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Membaca jadwal dari Sheets dan membuat event otomatis di Calendar.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script GAS untuk membaca jadwal di Google Sheets (Kolom: Judul Acara, Tanggal, Jam Mulai, Jam Selesai, Email Peserta), lalu membuatkan event di Google Calendar utama dan mengundang peserta secara otomatis.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="workspace">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-purple-50 text-purple-700 text-[10px] font-bold rounded-full">Workspace</span>
+                        <span class="text-[10px] font-bold text-slate-400">#16</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Dynamic Google Slides Generator</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Membuat presentasi laporan otomatis berdasarkan data angka terbaru.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Saya ingin membuat laporan bulanan otomatis. Buatkan kode GAS untuk menduplikasi template Google Slides, lalu mengganti teks dan grafik di Slides tersebut berdasarkan data angka terbaru dari Google Sheets.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="workspace">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-purple-50 text-purple-700 text-[10px] font-bold rounded-full">Workspace</span>
+                        <span class="text-[10px] font-bold text-slate-400">#17</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Multi-Sheet Consolidator</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Menggabungkan data dari banyak file spreadsheet menjadi satu Master Sheet.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script yang secara otomatis menggabungkan seluruh data dari beberapa file Spreadsheet di dalam satu folder Google Drive ke dalam satu Master Sheet utama.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="workspace">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-purple-50 text-purple-700 text-[10px] font-bold rounded-full">Workspace</span>
+                        <span class="text-[10px] font-bold text-slate-400">#18</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Auto-Renamer & Drive Organizer</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Merapikan dan mengubah nama file otomatis sesuai format tanggal.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script GAS untuk merapikan file di folder Google Drive. Script harus membaca semua file di folder, merubah namanya menjadi format YYYYMMDD_NamaFile, dan memindahkannya ke sub-folder tahun/bulan yang sesuai.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <!-- KATEGORI 4: API & WEB APPS -->
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="api">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full">API & Web</span>
+                        <span class="text-[10px] font-bold text-slate-400">#19</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">WhatsApp Gateway API Integration</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Mengirim notifikasi WhatsApp pesan teks dan lampiran PDF via API.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan contoh kode UrlFetchApp.fetch() di Apps Script untuk mengirimkan pesan WhatsApp otomatis melalui API Gateway (seperti Fonnte). Sertakan contoh pengiriman pesan teks biasa dan pengiriman file PDF invoice.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="api">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full">API & Web</span>
+                        <span class="text-[10px] font-bold text-slate-400">#20</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gemini / OpenAI Custom Formula</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Membuat rumus AI kustom di Google Sheets untuk merangkum teks.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan Custom Function di Google Sheets bernama =AI_SUMMARIZE(cell_range) menggunakan Google Apps Script yang memanggil Gemini API gratis untuk merangkum teks yang ada pada sel yang dipilih.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="api">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full">API & Web</span>
+                        <span class="text-[10px] font-bold text-slate-400">#21</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Web App API Builder (doGet & doPost)</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Mengubah Google Sheets menjadi REST API Webhook penerima data.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan struktur dasar Web App Google Apps Script menggunakan fungsi doGet(e) dan doPost(e) yang mengembalikan respon dalam format JSON (ContentService.MIME_JSON). Web App ini akan digunakan sebagai Webhook penerima data dari website eksternal.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="api">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full">API & Web</span>
+                        <span class="text-[10px] font-bold text-slate-400">#22</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Payment Gateway Webhook Receiver</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Update status transaksi di Sheets otomatis saat pembayaran berhasil.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan fungsi doPost(e) di GAS untuk menerima Webhook notifikasi pembayaran dari Payment Gateway (Midtrans/Xendit). Jika status transaksi "settlement" atau "success", update baris transaksi terkait di Google Sheets menjadi "LUNAS".</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="api">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full">API & Web</span>
+                        <span class="text-[10px] font-bold text-slate-400">#23</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Web Scraper via UrlFetchApp</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Mengambil harga atau data dari website eksternal secara periodik.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script GAS untuk mengambil (fetch) data HTML dari URL website tertentu, lalu mengekstrak teks angka/harga menggunakan RegEx (Regular Expression) dan memasukannya ke sel Google Sheets.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="api">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full">API & Web</span>
+                        <span class="text-[10px] font-bold text-slate-400">#24</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Telegram Bot Auto-Notification</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Kirim notifikasi ke Telegram Group setiap ada data baru di Sheets.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script GAS yang terhubung ke Telegram Bot API (https://api.telegram.org/bot<TOKEN>/sendMessage). Kirimkan notifikasi ke Group Telegram setiap kali ada transaksi baru bernilai lebih dari Rp 1.000.000 masuk ke Sheet.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <!-- KATEGORI 5: BISNIS & DELIVERY -->
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="bisnis">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-rose-50 text-rose-700 text-[10px] font-bold rounded-full">Bisnis & SOP</span>
+                        <span class="text-[10px] font-bold text-slate-400">#25</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Technical Documentation Generator</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Mengubah kodingan menjadi dokumen teknis yang rapi untuk serah terima.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Bertindaklah sebagai Technical Writer. Baca kode Google Apps Script di bawah ini, lalu buatkan dokumentasi teknis yang mencakup: 1. Deskripsi Fungsi, 2. Trigger/Dependensi, 3. Penjelasan Variabel Utama, 4. Cara Penggunaan End-User: [TEMPEL_KODE].</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="bisnis">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-rose-50 text-rose-700 text-[10px] font-bold rounded-full">Bisnis & SOP</span>
+                        <span class="text-[10px] font-bold text-slate-400">#26</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">SOP & User Guide Generator Klien</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Membuat panduan operasional bahasa Indonesia yang ramah untuk orang awam.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan draft panduan cara penggunaan (SOP) bahasa Indonesia yang ramah untuk klien awam non-teknis setelah kita menyerahkan sistem otomatisasi Google Sheets + Apps Script buatan kita.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="bisnis">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-rose-50 text-rose-700 text-[10px] font-bold rounded-full">Bisnis & SOP</span>
+                        <span class="text-[10px] font-bold text-slate-400">#27</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Client Requirement Gathering</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Draft kuesioner pertanyaan konsultasi untuk menggali kebutuhan klien.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Saya seorang AI & Automation Consultant. Buatkan kuesioner pertanyaan konsultasi singkat (5-7 pertanyaan) untuk calon klien yang ingin membuat otomatisasi Google Sheets / GAS agar saya bisa memperkirakan tingkat kesulitan dan estimasi harganya.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="bisnis">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-rose-50 text-rose-700 text-[10px] font-bold rounded-full">Bisnis & SOP</span>
+                        <span class="text-[10px] font-bold text-slate-400">#28</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Budget & Timeline Estimator Proyek</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Breakdown estimasi jam kerja, kesulitan, dan penetapan harga proyek.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Berdasarkan cakupan kebutuhan proyek otomatisasi berikut: [DEKRIPSI_PROYEK]. Berikan estimasi breakdown jam kerja, tingkat kesulitan (Easy/Medium/Hard), estimasi harga jasa freelancing yang wajar, serta potensi risiko teknis yang perlu diperhatikan.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="bisnis">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-rose-50 text-rose-700 text-[10px] font-bold rounded-full">Bisnis & SOP</span>
+                        <span class="text-[10px] font-bold text-slate-400">#29</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">WhatsApp Pitching Jasa Otomatisasi</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Naskah penawaran cold outreach yang persuasif ke pemilik UMKM.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Tuliskan naskah penawaran singkat (Cold Outreach) via WhatsApp ke pemilik bisnis UMKM/Online Shop. Jelaskan bagaimana jasa otomatisasi Google Apps Script dari SelBa Tech bisa menghemat waktu mereka hingga 10 jam per minggu.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="bisnis">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-rose-50 text-rose-700 text-[10px] font-bold rounded-full">Bisnis & SOP</span>
+                        <span class="text-[10px] font-bold text-slate-400">#30</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">ES6 Code Modernizer & Refactoring</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Mengubah kodingan GAS versi lama ke standar JavaScript ES6+ modern.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Ubah kode Google Apps Script gaya lama (ES5 / var) di bawah ini menjadi gaya modern (ES6+: const, let, Arrow Functions, Template Literals) tanpa mengubah fungsi utamanya: [TEMPEL_KODE].</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
             </div>
 
         </div>
@@ -148,12 +562,12 @@
     <!-- SECTION CUSTOM REQUEST -->
     <section id="kustom" class="py-12 max-w-6xl mx-auto px-6 w-full">
         <div class="bg-primary rounded-4xl p-8 md:p-12 text-white text-center shadow-xl shadow-blue-500/20">
-            <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Butuh Prompt Kustom Sesuai Kebutuhan Bisnismu?</h2>
+            <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Butuh System Prompt Kustom untuk Tim Bisnismu?</h2>
             <p class="text-blue-100 text-sm max-w-xl mx-auto mb-6">
-                Tim SelBa Tech siap merancang *Prompt Engineering System* khusus yang disesuaikan dengan alur kerja operasional tim atau perusahaanmu.
+                SelBa Tech siap merancang System Prompt khusus yang terintegrasi dengan alur kerja operasional perusahaan Anda.
             </p>
             <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20butuh%20Prompt%20Engineering%20Kustom" target="_blank" class="bg-white text-primary hover:bg-blue-50 font-extrabold px-8 py-3.5 rounded-full transition text-sm inline-block shadow-lg">
-                Konsultasi Request Prompt 💬
+                Konsultasi Prompt Kustom 💬
             </a>
         </div>
     </section>
@@ -162,7 +576,7 @@
     <footer class="bg-white border-t border-slate-200 py-8 mt-12">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
             <div>
-                &copy; 2026 SelBa Tech — AI Prompt Catalog.
+                &copy; 2026 SelBa Tech — AI Prompt Library.
             </div>
             <div>
                 <a href="index.html" class="hover:text-primary transition font-semibold">Kembali ke SelBa.Tech</a>
@@ -170,5 +584,48 @@
         </div>
     </footer>
 
+    <!-- JAVASCRIPT LOGIC (FILTERING & CLIPBOARD COPY) -->
+    <script>
+        function filterCategory(category, btn) {
+            // Update Tab Style
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(b => {
+                b.classList.remove('bg-primary', 'text-white', 'shadow-md', 'shadow-blue-500/20');
+                b.classList.add('bg-white', 'text-slate-600');
+            });
+            btn.classList.remove('bg-white', 'text-slate-600');
+            btn.classList.add('bg-primary', 'text-white', 'shadow-md', 'shadow-blue-500/20');
+
+            // Filter Cards
+            const cards = document.querySelectorAll('.prompt-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        function copyPrompt(btnElement) {
+            const preElement = btnElement.parentElement.querySelector('pre');
+            const textToCopy = preElement.innerText;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalContent = btnElement.innerHTML;
+                btnElement.innerHTML = '✅ Tersalin!';
+                btnElement.classList.remove('bg-slate-100', 'text-slate-800', 'hover:bg-primary', 'hover:text-white');
+                btnElement.classList.add('bg-emerald-600', 'text-white');
+
+                setTimeout(() => {
+                    btnElement.innerHTML = originalContent;
+                    btnElement.classList.remove('bg-emerald-600', 'text-white');
+                    btnElement.classList.add('bg-slate-100', 'text-slate-800', 'hover:bg-primary', 'hover:text-white');
+                }, 2000);
+            }).catch(err => {
+                alert('Gagal menyalin prompt: ' + err);
+            });
+        }
+    </script>
 </body>
 </html>
