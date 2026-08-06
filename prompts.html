@@ -11,9 +11,10 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563eb',
-                        dark: '#0f172a',
-                        accent: '#38bdf8'
+                        primary: '#1BBCC6',    /* Cyan Logo */
+                        secondary: '#0E724E',  /* Emerald Green Logo */
+                        accent: '#7A479B',     /* Violet Purple Logo */
+                        dark: '#0f172a'
                     },
                     borderRadius: {
                         '4xl': '2rem',
@@ -29,9 +30,9 @@
         .bg-mesh {
             background-color: #f8fafc;
             background-image: 
-                radial-gradient(at 0% 0%, rgba(186, 230, 253, 0.6) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(199, 210, 254, 0.5) 0px, transparent 50%),
-                radial-gradient(at 50% 100%, rgba(224, 242, 254, 0.7) 0px, transparent 50%);
+                radial-gradient(at 0% 0%, rgba(27, 188, 198, 0.18) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(122, 71, 155, 0.15) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(14, 114, 78, 0.12) 0px, transparent 50%);
         }
     </style>
 </head>
@@ -39,10 +40,11 @@
 
     <!-- NAVBAR -->
     <nav class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-xl z-50 border-b border-slate-200/80">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
-                <span class="w-8 h-8 bg-primary rounded-xl flex items-center justify-center text-white text-base">⚡</span>
-                SelBa<span class="text-primary">.Tech</span>
+        <div class="max-w-6xl mx-auto px-6 py-3.5 flex justify-between items-center">
+            <!-- LOGO DISAMPING JUDUL -->
+            <a href="index.html" class="text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-3">
+                <img src="logo.png" alt="SelBa Tech Logo" class="w-9 h-9 object-contain">
+                <span>SelBa<span class="text-primary">.Tech</span></span>
             </a>
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
                 <a href="index.html" class="hover:text-primary transition">← Kembali ke Beranda</a>
@@ -58,11 +60,11 @@
     <!-- HERO SECTION -->
     <section class="pt-36 pb-10 px-6 max-w-6xl mx-auto text-center">
         <div class="bg-white/80 backdrop-blur-md border border-slate-200/90 rounded-4xl p-8 md:p-12 shadow-xl shadow-slate-200/60">
-            <span class="px-4 py-1.5 bg-blue-50 border border-blue-200 rounded-full text-primary text-xs font-bold uppercase tracking-wider">
+            <span class="px-4 py-1.5 bg-cyan-50 border border-cyan-200 rounded-full text-primary text-xs font-bold uppercase tracking-wider">
                 🤖 SelBa AI Prompt Library
             </span>
             <h1 class="text-3xl md:text-5xl font-black text-slate-900 mt-4 leading-tight">
-                30+ AI Prompt Premium untuk <span class="text-primary">GAS, Automation & Bisnis</span>
+                30+ AI Prompt Premium untuk <span class="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">GAS, Automation & Bisnis</span>
             </h1>
             <p class="text-slate-600 text-base md:text-lg mt-3 max-w-2xl mx-auto">
                 Koleksi prompt engineering siap pakai untuk mengoptimalkan Google Apps Script, perbaikan error, hingga otomatisasi workflow tim Anda.
@@ -75,7 +77,7 @@
         
         <!-- Filter Tabs -->
         <div class="flex flex-wrap gap-2 justify-center mb-10" id="filter-container">
-            <button onclick="filterCategory('all', this)" class="filter-btn px-5 py-2.5 bg-primary text-white rounded-full text-xs font-bold transition shadow-md shadow-blue-500/20 border border-transparent">
+            <button onclick="filterCategory('all', this)" class="filter-btn px-5 py-2.5 bg-primary text-white rounded-full text-xs font-bold transition shadow-md shadow-cyan-500/20 border border-transparent">
                 Semua Prompt (30)
             </button>
             <button onclick="filterCategory('gas', this)" class="filter-btn px-5 py-2.5 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
@@ -102,7 +104,7 @@
             <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gas">
                 <div>
                     <div class="flex justify-between items-center mb-3">
-                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">GAS Logic</span>
+                        <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-[10px] font-bold rounded-full">GAS Logic</span>
                         <span class="text-[10px] font-bold text-slate-400">#01</span>
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">Otomatisasi Rekap Data Sheets</h3>
@@ -117,7 +119,7 @@
             <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gas">
                 <div>
                     <div class="flex justify-between items-center mb-3">
-                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">GAS Logic</span>
+                        <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-[10px] font-bold rounded-full">GAS Logic</span>
                         <span class="text-[10px] font-bold text-slate-400">#02</span>
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">Form Validator & Custom Email</h3>
@@ -132,7 +134,7 @@
             <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gas">
                 <div>
                     <div class="flex justify-between items-center mb-3">
-                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">GAS Logic</span>
+                        <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-[10px] font-bold rounded-full">GAS Logic</span>
                         <span class="text-[10px] font-bold text-slate-400">#03</span>
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">Custom Menu & Sidebar Generator</h3>
@@ -147,7 +149,7 @@
             <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gas">
                 <div>
                     <div class="flex justify-between items-center mb-3">
-                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">GAS Logic</span>
+                        <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-[10px] font-bold rounded-full">GAS Logic</span>
                         <span class="text-[10px] font-bold text-slate-400">#04</span>
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">Dynamic Cascading Dropdown</h3>
@@ -162,7 +164,7 @@
             <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gas">
                 <div>
                     <div class="flex justify-between items-center mb-3">
-                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">GAS Logic</span>
+                        <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-[10px] font-bold rounded-full">GAS Logic</span>
                         <span class="text-[10px] font-bold text-slate-400">#05</span>
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">Kalkulasi Skor & Ranking Otomatis</h3>
@@ -177,7 +179,7 @@
             <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gas">
                 <div>
                     <div class="flex justify-between items-center mb-3">
-                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">GAS Logic</span>
+                        <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-[10px] font-bold rounded-full">GAS Logic</span>
                         <span class="text-[10px] font-bold text-slate-400">#06</span>
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">Auto-Archive Data Berdasarkan Tanggal</h3>
@@ -561,12 +563,12 @@ Identifikasi penyebab utamanya, berikan kode perbaikannya, dan jelaskan mengapa 
 
     <!-- SECTION CUSTOM REQUEST -->
     <section id="kustom" class="py-12 max-w-6xl mx-auto px-6 w-full">
-        <div class="bg-primary rounded-4xl p-8 md:p-12 text-white text-center shadow-xl shadow-blue-500/20">
+        <div class="bg-primary rounded-4xl p-8 md:p-12 text-white text-center shadow-xl shadow-cyan-500/20">
             <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Butuh System Prompt Kustom untuk Tim Bisnismu?</h2>
-            <p class="text-blue-100 text-sm max-w-xl mx-auto mb-6">
+            <p class="text-cyan-50 text-sm max-w-xl mx-auto mb-6">
                 SelBa Tech siap merancang System Prompt khusus yang terintegrasi dengan alur kerja operasional perusahaan Anda.
             </p>
-            <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20butuh%20Prompt%20Engineering%20Kustom" target="_blank" class="bg-white text-primary hover:bg-blue-50 font-extrabold px-8 py-3.5 rounded-full transition text-sm inline-block shadow-lg">
+            <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20butuh%20Prompt%20Engineering%20Kustom" target="_blank" class="bg-white text-slate-900 hover:bg-cyan-50 font-extrabold px-8 py-3.5 rounded-full transition text-sm inline-block shadow-lg">
                 Konsultasi Prompt Kustom 💬
             </a>
         </div>
@@ -575,8 +577,9 @@ Identifikasi penyebab utamanya, berikan kode perbaikannya, dan jelaskan mengapa 
     <!-- FOOTER -->
     <footer class="bg-white border-t border-slate-200 py-8 mt-12">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-            <div>
-                &copy; 2026 SelBa Tech — AI Prompt Library.
+            <div class="flex items-center gap-2">
+                <img src="logo.png" alt="SelBa Tech Logo" class="w-5 h-5 object-contain">
+                <span>&copy; 2026 SelBa Tech — AI Prompt Library.</span>
             </div>
             <div>
                 <a href="index.html" class="hover:text-primary transition font-semibold">Kembali ke SelBa.Tech</a>
@@ -587,16 +590,14 @@ Identifikasi penyebab utamanya, berikan kode perbaikannya, dan jelaskan mengapa 
     <!-- JAVASCRIPT LOGIC (FILTERING & CLIPBOARD COPY) -->
     <script>
         function filterCategory(category, btn) {
-            // Update Tab Style
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(b => {
-                b.classList.remove('bg-primary', 'text-white', 'shadow-md', 'shadow-blue-500/20');
+                b.classList.remove('bg-primary', 'text-white', 'shadow-md', 'shadow-cyan-500/20');
                 b.classList.add('bg-white', 'text-slate-600');
             });
             btn.classList.remove('bg-white', 'text-slate-600');
-            btn.classList.add('bg-primary', 'text-white', 'shadow-md', 'shadow-blue-500/20');
+            btn.classList.add('bg-primary', 'text-white', 'shadow-md', 'shadow-cyan-500/20');
 
-            // Filter Cards
             const cards = document.querySelectorAll('.prompt-card');
             cards.forEach(card => {
                 if (category === 'all' || card.getAttribute('data-category') === category) {
