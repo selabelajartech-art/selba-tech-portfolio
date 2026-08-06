@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Proyek GAS | SelBa Tech</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        title: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1BBCC6',    /* Cyan Logo */
+                        secondary: '#0E724E',  /* Emerald Green Logo */
+                        accent: '#7A479B',     /* Violet Purple Logo */
+                        dark: '#0f172a',       /* Midnight Dark */
+                        canvas: '#f1f5f9'     /* Soft Slate Base */
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-mesh {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(27, 188, 198, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(122, 71, 155, 0.12) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(14, 114, 78, 0.1) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-mesh text-slate-900 antialiased min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-xl z-50 border-b border-slate-200/80">
+        <div class="max-w-6xl mx-auto px-6 py-3.5 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-3 font-title">
+                <img src="logo.png" alt="SelBa Tech Logo" class="w-9 h-9 object-contain">
+                <span>SelBa<span class="text-primary">.Tech</span></span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-primary transition">← Kembali ke Beranda</a>
+                <a href="prompts.html" class="hover:text-primary transition">Katalog Prompt 🚀</a>
+            </div>
+            <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20ingin%20konsultasi%20proyek%20GAS" target="_blank" class="bg-dark hover:bg-slate-800 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition shadow-md">
+                Konsultasi WA
+            </a>
+        </div>
+    </nav>
+
+    <!-- HEADER SECTION -->
+    <section class="pt-36 pb-10 px-6 max-w-6xl mx-auto text-center">
+        <span class="px-4 py-1.5 bg-cyan-50 text-primary border border-cyan-200 rounded-full text-xs font-bold uppercase tracking-wider">
+            📊 Proof of Concept & Solutions
+        </span>
+        <h1 class="text-3xl md:text-5xl font-black text-slate-900 mt-4 mb-3 font-title">
+            Katalog Proyek <span class="text-primary">Google Apps Script</span>
+        </h1>
+        <p class="text-slate-600 text-sm md:text-base max-w-2xl mx-auto">
+            Daftar aplikasi & otomatisasi siap pakai berbasis Google Ecosystem. Coba langsung *live demo*-nya di bawah ini!
+        </p>
+    </section>
+
+    <!-- GRID KATALOG (OTOMATIS DI-RENDER OLEH JAVASCRIPT) -->
+    <section class="pb-24 max-w-6xl mx-auto px-6">
+        <div id="gas-catalog-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards akan dirender otomatis via script JS di bawah -->
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center text-xs text-slate-400">
+            &copy; 2026 SelBa Tech. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- SCRIPT DATA & RENDERER -->
+    <script>
+        // =========================================================================
+        // 💡 TAMBAHKAN ATAU EDIT PROYEK KAMU DI SINI (ARRAY DATA)
+        // =========================================================================
+        const gasProjects = [
+            {
+                title: "Sistem Absensi QR & GPS Radius",
+                badge: "🟢 Live Demo Ready",
+                category: "Sekolah / Desa / UMKM",
+                desc: "Aplikasi absensi WebApp GAS tanpa install aplikasi tambahan. Mencegah manipulasi lokasi dan titip absen.",
+                features: ["Scan QR Code via Browser HP", "Lock Lokasi GPS Radius", "Auto Sync Log Google Sheets"],
+                demoUrl: "https://docs.google.com/sheets/d/EXAMPLE_ABSEN/copy",
+                orderUrl: "https://lynk.id/selbatech/absensi-qr"
+            },
+            {
+                title: "Auto-Invoice & WhatsApp Notifier",
+                badge: "🔥 Best Seller",
+                category: "Online Shop / Freelancer",
+                desc: "Sistem rekap transaksi otomatis yang mengubah baris Sheets jadi Invoice PDF & kirim WA otomatis ke pembeli.",
+                features: ["Auto-Generate PDF Invoice", "Pengiriman WA Direct Link/API", "Dashboard Omzet Otomatis"],
+                demoUrl: "https://docs.google.com/sheets/d/EXAMPLE_INVOICE/copy",
+                orderUrl: "https://lynk.id/selbatech/auto-invoice"
+            },
+            {
+                title: "Google Form to PDF Certificate",
+                badge: "⚡ Instant Utility",
+                category: "Event / Panitia Web",
+                desc: "Otomatisasi pembuat sertifikat/surat keputusan instan begitu peserta mengisi Google Forms.",
+                features: ["Template Google Slides/Docs", "Auto Send via Email PDF", "Bebas Limit Kuota"],
+                demoUrl: "https://docs.google.com/sheets/d/EXAMPLE_CERT/copy",
+                orderUrl: "https://lynk.id/selbatech/cert-generator"
+            },
+            {
+                title: "Padel Match Score Calculator",
+                badge: "🎾 Niche Sport Solution",
+                category: "Komunitas / Venue",
+                desc: "Kalkulator dan pencatat skor pertandingan Padel dengan logika perhitungan peringkat otomatis.",
+                features: ["Input Skor Praktis", "Auto Standing Table", "Ringkas & Mobile Friendly"],
+                demoUrl: "https://docs.google.com/sheets/d/EXAMPLE_PADEL/copy",
+                orderUrl: "https://lynk.id/selbatech/padel-score"
+            }
+        ];
+
+        // =========================================================================
+        // ⚙️ LOGIKA RENDERER UI (JANGAN DIUBAH KECUALI INGIN UBAH TAMPILAN)
+        // =========================================================================
+        function renderGasCatalog() {
+            const gridContainer = document.getElementById('gas-catalog-grid');
+            gridContainer.innerHTML = '';
+
+            gasProjects.forEach(project => {
+                const featureListHtml = project.features.map(f => 
+                    `<li class="flex items-center gap-2 text-slate-600">
+                        <span class="text-secondary font-bold">✓</span> ${f}
+                     </li>`
+                ).join('');
+
+                const cardHtml = `
+                    <div class="bg-white rounded-3xl border border-slate-200/90 p-7 flex flex-col justify-between shadow-md hover:shadow-xl transition duration-300">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="px-3.5 py-1 bg-emerald-50 text-secondary text-xs font-bold rounded-full">${project.badge}</span>
+                                <span class="text-[11px] font-bold text-slate-400">${project.category}</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 font-title">${project.title}</h3>
+                            <p class="text-slate-600 text-xs mb-5 leading-relaxed">${project.desc}</p>
+                            
+                            <ul class="text-xs space-y-2 mb-6 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                                ${featureListHtml}
+                            </ul>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2 pt-2">
+                            <a href="${project.demoUrl}" target="_blank" class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-center font-bold py-3 rounded-2xl transition text-xs flex items-center justify-center gap-1">
+                                👁️ Demo
+                            </a>
+                            <a href="${project.orderUrl}" target="_blank" class="bg-primary hover:bg-cyan-600 text-white text-center font-bold py-3 rounded-2xl transition text-xs shadow-md shadow-cyan-500/20 flex items-center justify-center gap-1">
+                                🚀 Beli / Order
+                            </a>
+                        </div>
+                    </div>
+                `;
+                gridContainer.innerHTML += cardHtml;
+            });
+        }
+
+        // Jalankan fungsi render saat halaman selesai dimuat
+        document.addEventListener('DOMContentLoaded', renderGasCatalog);
+    </script>
+</body>
+</html>
