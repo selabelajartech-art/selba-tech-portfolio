@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SelBa Tech (Sela Belajar Tech) | AI Consultant, Web Builder & Courses</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#38bdf8'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold text-white tracking-tight">
+                SelBa<span class="text-primary">.Tech</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#layanan" class="hover:text-primary transition">Layanan</a>
+                <a href="#produk" class="hover:text-primary transition">Produk Digital</a>
+                <a href="#kelas" class="hover:text-primary transition">Kelas & Mentoring</a>
+                <a href="#portofolio" class="hover:text-primary transition">Proyek</a>
+            </div>
+            <a href="#kontak" class="bg-primary hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition shadow-lg shadow-blue-500/20">
+                Konsultasi Gratis
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-36 pb-20 px-6 max-w-6xl mx-auto text-center md:text-left md:flex md:items-center md:justify-between">
+        <div class="md:w-3/5 space-y-6">
+            <div class="inline-block px-4 py-1.5 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-xs font-semibold uppercase tracking-wider">
+                Sela Belajar Tech — Solusi Digital & Otomatisasi
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+                Tingkatkan Efisiensi Bisnis Lebih Cepat Bersama <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-accent">SelBa Tech</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl font-normal leading-relaxed">
+                Kami membantu UMKM & Profesional mengotomatisasi pekerjaan dengan **Google Apps Script**, membangun **Web Modern**, dan menghadirkan solusi **AI Consultation**.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
+                <a href="#layanan" class="bg-primary hover:bg-blue-700 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg shadow-blue-600/30 transition text-center">
+                    Eksplor Layanan
+                </a>
+                <a href="#kelas" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-6 py-3.5 rounded-xl transition text-center">
+                    Lihat Kelas
+                </a>
+            </div>
+        </div>
+        <div class="mt-12 md:mt-0 md:w-2/5 flex justify-center">
+            <div class="w-72 h-72 md:w-80 md:h-80 bg-gradient-to-tr from-primary to-accent rounded-3xl p-1 shadow-2xl shadow-blue-500/20 rotate-3 hover:rotate-0 transition duration-500">
+                <div class="w-full h-full bg-slate-900 rounded-[22px] flex flex-col justify-center items-center p-6 text-center border border-slate-800">
+                    <span class="text-5xl mb-4">🚀</span>
+                    <h3 class="text-xl font-bold text-white">Smart Automation</h3>
+                    <p class="text-sm text-slate-400 mt-2">Menghubungkan Google Sheets, WhatsApp API, dan AI Workflow dalam sekali klik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION LAYANAN -->
+    <section id="layanan" class="py-20 bg-slate-950 border-t border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white">Layanan Unggulan</h2>
+                <p class="text-slate-400 mt-3">Solusi teknologi praktis yang siap membantu pengembangan bisnis dan karirmu.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition group">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        📊
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Google Apps Script & Automation</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Otomatisasi sistem invoice, laporan penjualan, manajemen stok, dan integrasi WhatsApp di Google Sheets/Forms.
+                    </p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition group">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        🤖
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">AI Consultation & Builder</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Integrasi ChatGPT/Gemini API ke dalam alur kerja bisnismu untuk menjawab kustom layanan pelanggan otomatis.
+                    </p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition group">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        💻
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Custom Web Builder</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Pembuatan landing page produk, web portofolio, dan aplikasi web khusus yang siap pakai, cepat, dan responsif.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PROYEK / PORTOFOLIO -->
+    <section id="portofolio" class="py-20 max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+                <h2 class="text-3xl font-bold text-white">Proyek & Hasil Karya</h2>
+                <p class="text-slate-400 mt-2">Beberapa proyek otomatisasi dan sistem web yang telah diselesaikan.</p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:border-slate-700 transition">
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-accent uppercase tracking-wider">Google Apps Script</span>
+                    <h3 class="text-xl font-bold text-white mt-1 mb-3">Sistem Invoice & WhatsApp Auto-Send</h3>
+                    <p class="text-slate-400 text-sm mb-4">Aplikasi Google Sheets yang secara otomatis membuat file PDF invoice dan mengirimkannya langsung ke pelanggan via WhatsApp API.</p>
+                    <div class="flex gap-2 text-xs">
+                        <span class="bg-slate-800 px-2.5 py-1 rounded text-slate-300">Google Sheets</span>
+                        <span class="bg-slate-800 px-2.5 py-1 rounded text-slate-300">Apps Script</span>
+                        <span class="bg-slate-800 px-2.5 py-1 rounded text-slate-300">Fonnte WA API</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:border-slate-700 transition">
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-accent uppercase tracking-wider">AI Integration</span>
+                    <h3 class="text-xl font-bold text-white mt-1 mb-3">AI Customer Support Assistant</h3>
+                    <p class="text-slate-400 text-sm mb-4">Integrasi OpenAI/Gemini API pada Google Form untuk merangkum dan membalas keluhan pelanggan secara otomatis.</p>
+                    <div class="flex gap-2 text-xs">
+                        <span class="bg-slate-800 px-2.5 py-1 rounded text-slate-300">Gemini API</span>
+                        <span class="bg-slate-800 px-2.5 py-1 rounded text-slate-300">Apps Script</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="kontak" class="bg-slate-950 border-t border-slate-800 py-12">
+        <div class="max-w-6xl mx-auto px-6 text-center md:flex md:justify-between md:items-center">
+            <div class="mb-6 md:mb-0">
+                <a href="#" class="text-2xl font-extrabold text-white">SelBa<span class="text-primary">.Tech</span></a>
+                <p class="text-slate-500 text-sm mt-1">Sela Belajar Tech — Belajar & Tumbuh Bersama Teknologi.</p>
+            </div>
+            <div class="text-slate-400 text-sm">
+                &copy; 2026 SelBa Tech. Powered by Git, Netlify & AI.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
