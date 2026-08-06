@@ -41,7 +41,6 @@
     <!-- NAVBAR -->
     <nav class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-xl z-50 border-b border-slate-200/80">
         <div class="max-w-6xl mx-auto px-6 py-3.5 flex justify-between items-center">
-            <!-- LOGO DISAMPING JUDUL -->
             <a href="index.html" class="text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-3">
                 <img src="logo.png" alt="SelBa Tech Logo" class="w-9 h-9 object-contain">
                 <span>SelBa<span class="text-primary">.Tech</span></span>
@@ -61,13 +60,13 @@
     <section class="pt-36 pb-10 px-6 max-w-6xl mx-auto text-center">
         <div class="bg-white/80 backdrop-blur-md border border-slate-200/90 rounded-4xl p-8 md:p-12 shadow-xl shadow-slate-200/60">
             <span class="px-4 py-1.5 bg-cyan-50 border border-cyan-200 rounded-full text-primary text-xs font-bold uppercase tracking-wider">
-                🤖 SelBa AI Prompt Library
+                🤖 SelBa AI Prompt & Gem Hub
             </span>
             <h1 class="text-3xl md:text-5xl font-black text-slate-900 mt-4 leading-tight">
-                30+ AI Prompt Premium untuk <span class="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">GAS, Automation & Bisnis</span>
+                60 AI Prompt & GEM Gemini untuk <span class="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">GAS, Sekolah & Layanan Publik</span>
             </h1>
             <p class="text-slate-600 text-base md:text-lg mt-3 max-w-2xl mx-auto">
-                Koleksi prompt engineering siap pakai untuk mengoptimalkan Google Apps Script, perbaikan error, hingga otomatisasi workflow tim Anda.
+                Koleksi prompt engineering siap pakai untuk mengoptimalkan Google Apps Script, perbaikan error, sistem absensi, hingga pembuatan Custom Gem di Gemini.
             </p>
         </div>
     </section>
@@ -77,30 +76,45 @@
         
         <!-- Filter Tabs -->
         <div class="flex flex-wrap gap-2 justify-center mb-10" id="filter-container">
-            <button onclick="filterCategory('all', this)" class="filter-btn px-5 py-2.5 bg-primary text-white rounded-full text-xs font-bold transition shadow-md shadow-cyan-500/20 border border-transparent">
-                Semua Prompt (30)
+            <button onclick="filterCategory('all', this)" class="filter-btn px-4 py-2 bg-primary text-white rounded-full text-xs font-bold transition shadow-md shadow-cyan-500/20 border border-transparent">
+                Semua Prompt (60)
             </button>
-            <button onclick="filterCategory('gas', this)" class="filter-btn px-5 py-2.5 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
-                ⚙️ GAS Logic & Fundamentals
+            <button onclick="filterCategory('gas', this)" class="filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                ⚙️ GAS Logic
             </button>
-            <button onclick="filterCategory('error', this)" class="filter-btn px-5 py-2.5 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
-                🛠️ Error & Debugging
+            <button onclick="filterCategory('error', this)" class="filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                🛠️ Error & Debug
             </button>
-            <button onclick="filterCategory('workspace', this)" class="filter-btn px-5 py-2.5 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
-                📂 Google Workspace
+            <button onclick="filterCategory('workspace', this)" class="filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                📂 Workspace
             </button>
-            <button onclick="filterCategory('api', this)" class="filter-btn px-5 py-2.5 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
-                🌐 API & Web Apps
+            <button onclick="filterCategory('api', this)" class="filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                🌐 API & Web
             </button>
-            <button onclick="filterCategory('bisnis', this)" class="filter-btn px-5 py-2.5 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
-                💼 Bisnis & Delivery
+            <button onclick="filterCategory('bisnis', this)" class="filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                💼 Bisnis & SOP
+            </button>
+            <button onclick="filterCategory('absensi', this)" class="filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                📋 Absensi
+            </button>
+            <button onclick="filterCategory('sekolah', this)" class="filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                🏫 Sekolah
+            </button>
+            <button onclick="filterCategory('publik', this)" class="filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                🏛️ Layanan Desa/Publik
+            </button>
+            <button onclick="filterCategory('kesehatan', this)" class="filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                🏥 Kesehatan
+            </button>
+            <button onclick="filterCategory('gem', this)" class="filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-100 rounded-full text-xs font-bold transition border border-slate-200">
+                🤖 Gem Architecture
             </button>
         </div>
 
         <!-- Cards Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="prompt-grid">
 
-            <!-- KATEGORI 1: GAS LOGIC -->
+            <!-- KATEGORI 1: GAS LOGIC (1-6) -->
             <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gas">
                 <div>
                     <div class="flex justify-between items-center mb-3">
@@ -191,7 +205,7 @@
                 <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
             </div>
 
-            <!-- KATEGORI 2: ERROR & DEBUGGING -->
+            <!-- KATEGORI 2: ERROR & DEBUGGING (7-12) -->
             <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="error">
                 <div>
                     <div class="flex justify-between items-center mb-3">
@@ -285,7 +299,7 @@ Identifikasi penyebab utamanya, berikan kode perbaikannya, dan jelaskan mengapa 
                 <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
             </div>
 
-            <!-- KATEGORI 3: GOOGLE WORKSPACE -->
+            <!-- KATEGORI 3: GOOGLE WORKSPACE (13-18) -->
             <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="workspace">
                 <div>
                     <div class="flex justify-between items-center mb-3">
@@ -376,7 +390,7 @@ Identifikasi penyebab utamanya, berikan kode perbaikannya, dan jelaskan mengapa 
                 <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
             </div>
 
-            <!-- KATEGORI 4: API & WEB APPS -->
+            <!-- KATEGORI 4: API & WEB APPS (19-24) -->
             <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="api">
                 <div>
                     <div class="flex justify-between items-center mb-3">
@@ -467,7 +481,7 @@ Identifikasi penyebab utamanya, berikan kode perbaikannya, dan jelaskan mengapa 
                 <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
             </div>
 
-            <!-- KATEGORI 5: BISNIS & DELIVERY -->
+            <!-- KATEGORI 5: BISNIS & DELIVERY (25-30) -->
             <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="bisnis">
                 <div>
                     <div class="flex justify-between items-center mb-3">
@@ -558,17 +572,472 @@ Identifikasi penyebab utamanya, berikan kode perbaikannya, dan jelaskan mengapa 
                 <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
             </div>
 
+            <!-- KATEGORI 6: SISTEM ABSENSI & KEHADIRAN (31-36) -->
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="absensi">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">Absensi & GPS</span>
+                        <span class="text-[10px] font-bold text-slate-400">#31</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Absensi QR Code & Geolocation</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Web App absensi QR code dengan verifikasi GPS radius max 100m.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Bertindaklah sebagai Senior System Architect untuk Layanan Publik. Buatkan kodingan Google Apps Script (Web App) untuk Sistem Absensi QR Code yang dilengkapi dengan verifikasi Geolocation (GPS Radius max 100 meter dari koordinat kantor/sekolah). Tampilkan UI HTML responsif Tailwind CSS yang memiliki tombol scan kamera dan deteksi posisi seluler pengguna, lalu simpan nama, timestamp, lokasi, dan link Google Maps ke Google Sheets.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="absensi">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">Absensi & GPS</span>
+                        <span class="text-[10px] font-bold text-slate-400">#32</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Rekap Keterlambatan & Jam Kerja</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Mengkalkulasi total keterlambatan dan rekap kehadiran bulanan otomatis.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Bertindaklah sebagai Data Automation Expert. Buatkan fungsi Google Apps Script yang membaca log absensi mentah di Sheet "Log_Harian" (isi: ID, Nama, Tanggal, Jam_Masuk, Jam_Keluar), lalu secara otomatis mengkalkulasi total keterlambatan (dalam menit), jumlah hadir, izin, dan alpa ke Sheet "Rekap_Bulanan" setiap akhir bulan menggunakan Time-Driven Trigger.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="absensi">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">Absensi & GPS</span>
+                        <span class="text-[10px] font-bold text-slate-400">#33</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Auto-Notifikasi WA Ortu Siswa</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Notifikasi otomatis via WA saat siswa terlambat atau alpa sekolah.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Bertindaklah sebagai WhatsApp Integration Engineer. Buatkan script Google Apps Script yang mendeteksi saat siswa melakukan absensi di Google Forms/Sheets. Jika status absensi adalah "TERLAMBAT" atau "ALPA", kirimkan pesan WhatsApp otomatis via Fonnte API ke nomor orang tua siswa berisi nama siswa, jam, dan status kehadiran.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="absensi">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">Absensi & GPS</span>
+                        <span class="text-[10px] font-bold text-slate-400">#34</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Audit Race-Condition Absensi</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Pencegahan bentrok data menggunakan LockService saat 50+ absensi bersamaan.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Bertindaklah sebagai Expert GAS Auditor. Kode sistem absensi Google Apps Script berikut mengalami kendala race-condition ketika 50+ pengguna melakukan absensi secara bersamaan: [TEMPEL_KODE]. Analisis bagian kode yang menyebabkan bentrok data di Google Sheets, lalu optimalkan menggunakan LockService (LockService.getScriptLock()) agar semua transaksi baris absensi terantre dengan aman.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="absensi">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">Absensi & GPS</span>
+                        <span class="text-[10px] font-bold text-slate-400">#35</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Shift & Piket Validation Engine</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Memvalidasi jam mengabsen petugas piket agar sesuai jadwal master shift.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan logika Apps Script untuk memvalidasi jam masuk absensi petugas piket kantor desa/sekolah. Cek apakah petugas mengabsen sesuai dengan jadwal shift yang tertera di Sheet "Master_Jadwal". Jika mengabsen di luar shift, berikan notifikasi peringatan di UI Web App dan tandai kolom Sheet dengan status "Luar Shift".</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="absensi">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">Absensi & GPS</span>
+                        <span class="text-[10px] font-bold text-slate-400">#36</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Web App Pengajuan Cuti & Izin</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Formulir digital pengajuan cuti beserta upload bukti ke Google Drive.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan struktur Web App Google Apps Script lengkap (doGet + HTML) untuk formulir pengajuan izin/cuti warga atau pegawai. Formulir harus menyertakan input Nama, Alasan, Tanggal Cuti, dan Unggah Surat Dokter/Bukti (file dikirim langsung ke folder Google Drive khusus dan URL filenya tercatat di Sheet).</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <!-- KATEGORI 7: DASHBOARD SEKOLAH & EDUKASI (37-42) -->
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="sekolah">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded-full">Dashboard Sekolah</span>
+                        <span class="text-[10px] font-bold text-slate-400">#37</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Rapor & Kalkulator Nilai</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Perhitungan bobot nilai akhir dan pembuatan PDF Rapor otomatis.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Bertindaklah sebagai Educational Software Developer. Buatkan script Google Apps Script untuk menghitung nilai akhir siswa berdasarkan bobot Tugas (20%), UTS (30%), dan UAS (50%). Jika nilai akhir < 75, tandai kolom status sebagai "REMIDIAL". Buatkan juga fungsi untuk melakukan generate PDF Rapor otomatis dari template Google Docs.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="sekolah">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded-full">Dashboard Sekolah</span>
+                        <span class="text-[10px] font-bold text-slate-400">#38</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Inventaris & Peminjaman Alat</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Sistem peminjaman proyektor/laptop dengan verifikasi stok otomatis.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan Web App Google Apps Script untuk sistem peminjaman inventaris sekolah (Laptop, Proyektor, Alat Olahraga). Fitur mencakup: Form Peminjaman, Cek Stok Barang Otomatis, dan Form Pengembalian yang otomatis mengubah status barang di Sheet menjadi "Tersedia".</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="sekolah">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded-full">Dashboard Sekolah</span>
+                        <span class="text-[10px] font-bold text-slate-400">#39</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Perpus Digital & Denda Otomatis</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Cek masa pinjam buku dan pengiriman email pengingat denda harian.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan Google Apps Script untuk manajemen perpustakaan sekolah. Script berjalan setiap hari pukul 08.00 untuk memeriksa tanggal pengembalian buku di Sheet "Peminjaman". Jika tanggal hari ini > tanggal kembali, hitung denda kustom (Rp 1.000/hari) dan kirimkan email pengingat pengembalian ke siswa.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="sekolah">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded-full">Dashboard Sekolah</span>
+                        <span class="text-[10px] font-bold text-slate-400">#40</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Dashboard Statistik PPDB</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Visualisasi statistik pendaftar PPDB real-time via REST JSON API.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan fungsi Google Apps Script (`getPPDBStats()`) yang mengambil data dari Sheet "Pendaftaran_PPDB" dan mengembalikan data JSON berisi: total pendaftar, jumlah pendaftar per jalur (Zonasi/Prestasi/Afirmasi), serta kuota tersisa. Buatkan juga contoh tampilan ringkas widget statistiknya menggunakan HTML/CSS.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="sekolah">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded-full">Dashboard Sekolah</span>
+                        <span class="text-[10px] font-bold text-slate-400">#41</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Kartu Pelajar & QR Code PDF</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Auto-generate kartu pelajar ber-QR Code dari data Google Sheets.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script GAS yang membaca data siswa dari Google Sheets, men-generate QR Code unik berdasarkan NISN via QuickChart API, memasukkan foto dan data ke template Google Slides / Docs Kartu Pelajar, lalu mengonversinya menjadi PDF siap cetak.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="sekolah">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded-full">Dashboard Sekolah</span>
+                        <span class="text-[10px] font-bold text-slate-400">#42</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Early Warning System Remidial</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Peringatan dini otomatis ke Wali Kelas untuk siswa bermasalah.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan sistem peringatan dini otomatis di GAS. Jika seorang siswa memiliki tingkat kehadiran di bawah 80% ATAU memiliki lebih dari 3 mata pelajaran yang remidial, secara otomatis kirimkan email rangkuman khusus ke Wali Kelas dan Guru BK.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <!-- KATEGORI 8: LAYANAN PUBLIK & DESA (43-48) -->
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="publik">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 text-[10px] font-bold rounded-full">Layanan Publik</span>
+                        <span class="text-[10px] font-bold text-slate-400">#43</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Suratin (Generator Surat Desa)</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Otomatisasi pembuatan Surat Keterangan Domisili/Usaha warga ke PDF.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Bertindaklah sebagai Public Service Automation Expert. Buatkan script Google Apps Script untuk otomatisasi pembuatan Surat Keterangan Domisili/Usaha warga. Warga mengisi Google Form, script membaca data, mengganti tag variabel di Google Docs template ({{NAMA}}, {{NIK}}, {{ALAMAT}}), mengonversi ke PDF, dan menyimpan file di folder Drive Arsip Desa.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="publik">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 text-[10px] font-bold rounded-full">Layanan Publik</span>
+                        <span class="text-[10px] font-bold text-slate-400">#44</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Portal Pengaduan (Lapor Warga)</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Portal tiket pengaduan jalan/sampah terhubung Telegram Bot desa.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan Web App Google Apps Script untuk portal pengaduan masyarakat. Warga bisa mengunggah foto masalah (jalan rusak, sampah, dll) dan deskripsi. Script akan menghasilkan nomor tiket unik (contoh: TKT-2026-001) dan mengirimkan notifikasi instan ke grup Telegram RT/RW/Aparatur Desa.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="publik">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 text-[10px] font-bold rounded-full">Layanan Publik</span>
+                        <span class="text-[10px] font-bold text-slate-400">#45</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Antrean Digital Pelayanan Publik</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Sistem tiket antrean digital ruang tunggu kantor desa via Web App GAS.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan sistem antrean kantor desa/sekolah berbasis Web App GAS. Warga memilih jenis layanan (Pengurusan KTP/Surat Keterangan/Legalisir), lalu mendapat Nomor Antrean digital yang otomatis diperbarui secara realtime di layar monitor ruang tunggu.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="publik">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 text-[10px] font-bold rounded-full">Layanan Publik</span>
+                        <span class="text-[10px] font-bold text-slate-400">#46</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Verifikasi Kelayakan Bansos</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Rumus kalkulasi skor kemiskinan dan penentuan status layak bansos.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan rumus kustom & fungsi GAS CEK_KELAYAKAN_BANSOS(penghasilan, tanggungan, status_rumah) yang mengevaluasi kriteria kemiskinan daerah, menghitung skor kelayakan secara matematis, dan menandai status "LAYAK" atau "TIDAK LAYAK" di Google Sheets.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="publik">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 text-[10px] font-bold rounded-full">Layanan Publik</span>
+                        <span class="text-[10px] font-bold text-slate-400">#47</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Reminder Iuran RT/RW via WA</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Pengiriman tagihan iuran bulanan warga yang personal via WA API.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script Google Apps Script untuk pengelola RT/RW yang membaca daftar iuran warga di Google Sheets. Kirimkan pesan pengingat iuran bulanan yang personal (menyebutkan nama warga dan nominal) via WhatsApp Gateway API.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="publik">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 text-[10px] font-bold rounded-full">Layanan Publik</span>
+                        <span class="text-[10px] font-bold text-slate-400">#48</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Booking Fasilitas Balai Desa</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Sistem pendaftaran sewa gedung/lapangan untuk cegah double booking.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan Web App Apps Script untuk pendaftaran sewa/pinjam Balai Desa atau Lapangan Olahraga. Script harus memeriksa apakah tanggal yang dipilih warga sudah terisi di Sheet "Jadwal_Booking" untuk mencegah terjadinya double booking.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <!-- KATEGORI 9: LAYANAN KESEHATAN & KOMUNITAS (49-54) -->
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="kesehatan">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-red-50 text-red-700 text-[10px] font-bold rounded-full">Kesehatan</span>
+                        <span class="text-[10px] font-bold text-slate-400">#49</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Registrasi Klinik & Pustu</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Pendaftaran berobat pasien dengan kuota harian otomatis.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan Web App Google Apps Script untuk pendaftaran berobat warga di Puskesmas Pembantu. Pendaftaran dibatasi maksimal 30 pasien per hari. Jika kuota hari tersebut penuh, alihkan formulir secara otomatis untuk pendaftaran besok.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="kesehatan">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-red-50 text-red-700 text-[10px] font-bold rounded-full">Kesehatan</span>
+                        <span class="text-[10px] font-bold text-slate-400">#50</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Posyandu & Monitoring Stunting</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Pencatatan tumbuh kembang balita dan deteksi indikator stunting.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script GAS untuk mencatat data tumbuh kembang balita (Usia, Berat Badan, Tinggi Badan). Bandingkan dengan standar z-score kesehatan dan keluarkan indikator otomatis ("Sesuai", "Gizi Kurang", atau "Potensi Stunting") serta rekapitulasi grafik bulanan.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="kesehatan">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-red-50 text-red-700 text-[10px] font-bold rounded-full">Kesehatan</span>
+                        <span class="text-[10px] font-bold text-slate-400">#51</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Inventaris Obat & Expired Alert</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Peringatan email mingguan untuk obat yang mendekati masa kadaluarsa.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script Time-Driven Trigger GAS yang memeriksa masa kadaluarsa stok obat di Puskesmas/Klinik Desa pada Google Sheets setiap minggu. Jika ada obat yang kadaluarsa dalam waktu kurang dari 30 hari, buatkan alert email daftar obat ke penanggung jawab farmasi.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="kesehatan">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-red-50 text-red-700 text-[10px] font-bold rounded-full">Kesehatan</span>
+                        <span class="text-[10px] font-bold text-slate-400">#52</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Jadwal Piket & On-Call Nakes</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Rotasi jadwal harian nakes desa dan update pengumuman otomatis.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script GAS yang secara rotasi menentukan jadwal piket harian petugas kesehatan desa dari daftar Sheet "Master_Petugas", lalu secara otomatis memperbarui pengumuman di website/dashboard desa setiap jam 00:00.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="kesehatan">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-red-50 text-red-700 text-[10px] font-bold rounded-full">Kesehatan</span>
+                        <span class="text-[10px] font-bold text-slate-400">#53</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Auto-Reminder Imunisasi / Kontrol</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">SMS/WA pengingat H-1 jadwal imunisasi balita & kontrol ibu hamil.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script GAS yang mendeteksi H-1 jadwal imunisasi balita atau kontrol ibu hamil dari Google Sheets, lalu secara otomatis mengirimkan pesan pengingat SMS/WhatsApp ke nomor orang tua/pasien.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="kesehatan">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-red-50 text-red-700 text-[10px] font-bold rounded-full">Kesehatan</span>
+                        <span class="text-[10px] font-bold text-slate-400">#54</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Kalkulator Indeks Kepuasan (IKM)</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Perhitungan otomatis skor IKM pelayanan publik sesuai PermenPAN-RB.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan fungsi kustom Google Apps Script untuk menghitung nilai Indeks Kepuasan Masyarakat (IKM) berdasarkan PermenPAN-RB dari hasil survei Google Form 9 unsur pelayanan publik, lengkap dengan pengkategorian Mutu Pelayanan (A/B/C/D).</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <!-- KATEGORI 10: GEM ARCHITECTURE & UI GAS (55-60) -->
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gem">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-violet-50 text-violet-700 text-[10px] font-bold rounded-full">Gem Architecture</span>
+                        <span class="text-[10px] font-bold text-slate-400">#55</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">System Instructions Gemini Gem</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">System prompt khusus untuk melatih Gem menjadi Pakar Otomatisasi Desa.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Bertindaklah sebagai AI Prompt Specialist. Buatkan System Instructions (Gem Prompt) komprehensif untuk Gemini Gem yang bertugas sebagai "Public Automation Assistant". Assistant ini harus selalu memberikan solusi kode Google Apps Script yang aman, ringan, menggunakan Javascript ES6+, dan ramah untuk pengguna non-teknis di pemerintahan/sekolah.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gem">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-violet-50 text-violet-700 text-[10px] font-bold rounded-full">Gem Architecture</span>
+                        <span class="text-[10px] font-bold text-slate-400">#56</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Tailwind UI Template Generator</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Template HTML Tailwind responsif khusus Web App GAS + Spinner AJAX.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan template dasar Index.html responsif menggunakan Tailwind CSS CDN yang dirancang khusus untuk Web App Google Apps Script. Template harus memiliki header modern, card layout bento, form masukan interaktif, dan penanganan loading spinner AJAX (google.script.run).</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gem">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-violet-50 text-violet-700 text-[10px] font-bold rounded-full">Gem Architecture</span>
+                        <span class="text-[10px] font-bold text-slate-400">#57</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Multi-Level Access Control</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Sistem login otentikasi role (Admin, Petugas, Warga) di Web App GAS.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan struktur otentikasi login sederhana pada Web App Google Apps Script yang membaca data dari Sheet "Users" (Email, Password Hash, Role). Batasi hak akses halaman berdasarkan role pengguna: Admin (Full Akses), Petugas (Edit Data), Warga (View Only).</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gem">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-violet-50 text-violet-700 text-[10px] font-bold rounded-full">Gem Architecture</span>
+                        <span class="text-[10px] font-bold text-slate-400">#58</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Auto-Backup Sheets ke Drive</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Backup berkala bulanan otomatis file kependudukan ke Google Drive.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan script Apps Script yang secara berkala (setiap bulan) membuat salinan cadangan (backup) file Google Sheets data warga/siswa ke dalam folder khusus Google Drive dengan format nama BACKUP_[NAMA_SHEET]_[YYYYMMDD].</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gem">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-violet-50 text-violet-700 text-[10px] font-bold rounded-full">Gem Architecture</span>
+                        <span class="text-[10px] font-bold text-slate-400">#59</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Telegram Webhook Status Cek</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Bot Telegram pembalas otomatis status pengaduan warga dari Sheets.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan kode Apps Script doPost(e) yang menerima pesan masuk dari Telegram Bot webhook. Jika warga mengetikkan /status [NOMOR_TIKET], script akan mencari baris status pengaduan di Google Sheets dan merespon kembali pesan ke Telegram warga tersebut.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
+            <div class="prompt-card bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="gem">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-3 py-1 bg-violet-50 text-violet-700 text-[10px] font-bold rounded-full">Gem Architecture</span>
+                        <span class="text-[10px] font-bold text-slate-400">#60</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Gem Document Verifier via QR Code</h3>
+                    <p class="text-slate-600 text-xs mb-3 leading-relaxed">Sistem verifikasi keaslian dokumen publik melalui scan QR Code Web App.</p>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-2xl text-[11px] font-mono mb-4">
+                        <pre class="whitespace-pre-wrap font-mono text-slate-300">Buatkan sistem verifikasi keaslian dokumen publik. Script GAS menghasilkan URL Web App unik yang di-embed pada QR Code dokumen PDF (https://script.google.com/.../exec?docId=DOC123). Ketika QR Code di-scan, Web App menampilkan halaman konfirmasi keabsahan dokumen beserta data resminya.</pre>
+                    </div>
+                </div>
+                <button onclick="copyPrompt(this)" class="w-full bg-slate-100 hover:bg-primary hover:text-white text-slate-800 font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2">📋 Salin Prompt</button>
+            </div>
+
         </div>
     </section>
 
     <!-- SECTION CUSTOM REQUEST -->
     <section id="kustom" class="py-12 max-w-6xl mx-auto px-6 w-full">
         <div class="bg-primary rounded-4xl p-8 md:p-12 text-white text-center shadow-xl shadow-cyan-500/20">
-            <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Butuh System Prompt Kustom untuk Tim Bisnismu?</h2>
+            <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Butuh System Prompt & Custom Gem Khusus Tim Anda?</h2>
             <p class="text-cyan-50 text-sm max-w-xl mx-auto mb-6">
-                SelBa Tech siap merancang System Prompt khusus yang terintegrasi dengan alur kerja operasional perusahaan Anda.
+                SelBa Tech siap merancang System Prompt & Gem Gemini kustom yang terintegrasi langsung dengan alur operasional instansi atau perusahaan Anda.
             </p>
-            <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20butuh%20Prompt%20Engineering%20Kustom" target="_blank" class="bg-white text-slate-900 hover:bg-cyan-50 font-extrabold px-8 py-3.5 rounded-full transition text-sm inline-block shadow-lg">
+            <a href="https://wa.me/6281234567890?text=Halo%20SelBa%20Tech,%20saya%20butuh%20Prompt%20Engineering%20%26%20Gem%20Kustom" target="_blank" class="bg-white text-slate-900 hover:bg-cyan-50 font-extrabold px-8 py-3.5 rounded-full transition text-sm inline-block shadow-lg">
                 Konsultasi Prompt Kustom 💬
             </a>
         </div>
@@ -579,7 +1048,7 @@ Identifikasi penyebab utamanya, berikan kode perbaikannya, dan jelaskan mengapa 
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
             <div class="flex items-center gap-2">
                 <img src="logo.png" alt="SelBa Tech Logo" class="w-5 h-5 object-contain">
-                <span>&copy; 2026 SelBa Tech — AI Prompt Library.</span>
+                <span>&copy; 2026 SelBa Tech — AI Prompt & Gem Hub.</span>
             </div>
             <div>
                 <a href="index.html" class="hover:text-primary transition font-semibold">Kembali ke SelBa.Tech</a>
@@ -587,7 +1056,7 @@ Identifikasi penyebab utamanya, berikan kode perbaikannya, dan jelaskan mengapa 
         </div>
     </footer>
 
-    <!-- JAVASCRIPT LOGIC (FILTERING & CLIPBOARD COPY) -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
         function filterCategory(category, btn) {
             const buttons = document.querySelectorAll('.filter-btn');
